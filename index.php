@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <title>VR Raziskovalna</title>
-    <meta name="description" content="Hello, World! - A-Frame">
-    <script src="aframe.js"></script>
-	<script src="aframe-event-set-component.js"></script>
-	<script src="custom.js"></script>
-	<script src="set-image.js"></script>
+    <meta name="description" content="VR Trener">
+    <script src="../scripts/aframe.js"></script>
+	<script src="../scripts/aframe-event-set-component.js"></script>
+	<script src="../scripts/custom.js"></script>
+	<script src="../scripts/set-image.js"></script>
   </head>
   <body>
     <a-scene>
