@@ -12,7 +12,7 @@
   <body>
     <a-scene>
 		<!-- 360 Slika -->
-      <a-sky id="img-sky" src="360/SAM_100_0089.jpg"></a-sky>
+      <a-sky id="img-sky" src="../360/SAM_100_0089.jpg"></a-sky>
 	  
 	  <a-entity id="sphere" geometry="primitive: sphere" material="color: blue" position="33.154 15.231 3.313" radius="1.25"
 				event-set__enter="_event: click; material.color: yellowgreen;"
