@@ -6,15 +6,20 @@
     <meta name="description" content="VR Trener">
     <script src="../scripts/aframe.js"></script>
 	<script src="../scripts/aframe-event-set-component.js"></script>
-	<script src="../scripts/custom.js"></script>
 	<script src="../scripts/set-image.js"></script>
+	<script src="../scripts/jquery-3.2.1.min.js"></script>
+	<script src="../scripts/custom.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
+  	<div id="test_div" onclick="off()" class="test_div">
+		<p>hello world</p>
+	</div>
     <a-scene>
 		<!-- 360 Slika -->
       <a-sky id="img-sky" src="../360/SAM_100_0089.jpg"></a-sky>
 	  
-	  <a-entity id="sphere" geometry="primitive: sphere" material="color: blue" position="33.154 15.231 3.313" radius="1.25"
+	  <a-entity id="sphere" onclick="tes()" geometry="primitive: sphere" material="color: blue" position="33.154 15.231 3.313" radius="1.25"
 				event-set__enter="_event: click; material.color: yellowgreen;"
 				event-set__leave="_event: mouseleave; material.color: blue;">
 	  </a-entity>
