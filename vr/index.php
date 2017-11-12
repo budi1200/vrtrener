@@ -15,7 +15,7 @@
   	<div id="test_div" onclick="off()" class="test_div">
 		<p>hello world</p>
 	</div>
-    <a-scene>
+    <a-scene vr-mode-ui="enabled: false">
 		<!-- 360 Slika -->
       <a-sky id="img-sky" src="../360/SAM_100_0089.jpg"></a-sky>
 	  
