@@ -1,1 +1,1 @@
-"# vrtrener-test" 
+"Raziskovalna Naloga v Virtual Reality" 
