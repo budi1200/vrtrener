@@ -9,7 +9,7 @@ function setWindow(el_id){
 	test.style.display = "block";
 	//test.style.top =  (mouseY) + 'px';
 	//test.style.left = (mouseX) + 'px';
-	test.style.top = "40.5%";
+	test.style.top = "20.5%";
 	test.style.left = "50.5%";
 //	console.log(mouseX);
 //	console.log(mouseY);
