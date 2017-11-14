@@ -26,6 +26,7 @@ body{
 footer{
 	text-align:center;
 	letter-spacing: 5px;
+	padding-top: 10px;
 }
 #quote{
 	text-align:center;
@@ -35,4 +36,7 @@ footer{
 	text-align:center;
 	font-family: courier new;
 	padding-bottom:30px;
+}
+.button_vhod{
+	text-decoration: none;
 }

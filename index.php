@@ -29,7 +29,8 @@
 			</tr>
 			<tr>
 				<td id="td_vr_logo" colspan="2">
-					<a href="https://vrtrener-test.herokuapp.com/vr/index.php"><img src="slike_prva_stran/vr_logo.png" alt="vr_logo" height="80px" width="100px"></a> 
+					<!-- <a href="https://vrtrener-test.herokuapp.com/vr/index.php"><img src="slike_prva_stran/vr_logo.png" alt="vr_logo" height="80px" width="100px"></a> -->
+					<button class="button_vhod"><a href="https://vrtrener-test.herokuapp.com/vr/index.php">Vhod</a></button>
 				</td>
 			</tr>
 		</table>
