@@ -10,10 +10,21 @@
 	<script src="../scripts/jquery-3.2.1.min.js"></script>
 	<script src="../scripts/custom.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="../vaja_izgled/design.css">
   </head>
   <body>
-  	<div id="test_1" onclick="off('test_1')" class="test">
-		<p>hello world</p>
+	<div id="test_1" class="window" onclick="off('test_1')">
+		<div class="box_text">
+			<h4>Vaja Brisalci</h4><br>
+			<div class="video">
+				<video width="300" height="400" autoplay loop>
+					<source src="gif/zunaj/brisalci.mp4" type="video/mp4">
+				</video>
+			</div>
+			<div class="opis">
+				<p>is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have </p>
+			</div>
+		</div>
 	</div>
 	
 	<div id="test_2" onclick="off('test_2')" class="test">
