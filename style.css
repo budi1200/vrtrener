@@ -1,6 +1,6 @@
 h1{
 	text-align:center;
-	color:blue;
+	color:black;
 }
 table{
 	width:100%;
@@ -18,4 +18,21 @@ table{
 #td_vr_logo{
 	text-align: center;
 	padding-top: 20px;
+}
+body{
+	background-image: url("nature1.jpg");
+	background-size: 1366px 637px;
+}
+footer{
+	text-align:center;
+	letter-spacing: 5px;
+}
+#quote{
+	text-align:center;
+	font-family: courier new;
+}
+#quote_author{
+	text-align:center;
+	font-family: courier new;
+	padding-bottom:30px;
 }
