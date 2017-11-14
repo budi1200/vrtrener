@@ -1,9 +1,12 @@
 .window{
+	position: fixed;
+	display: none;
 	width:500px;
 	height:500px;
 	background-color:#CCC;
 	opacity:0.6;
 	border-radius:8px;
+	z-index: 2;
 }
 .box_text{
 	padding:10px;
