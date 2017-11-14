@@ -26,10 +26,6 @@
 			</div>
 		</div>
 	</div>
-	
-	<div id="test_2" onclick="off('test_2')" class="window">
-		<p>hello world22</p>
-	</div>
     <a-scene vr-mode-ui="enabled: false">
 		<!-- 360 Slika -->
       <a-sky id="img-sky" src="../360/SAM_100_0089.jpg"></a-sky>
@@ -48,7 +44,7 @@
 	  <a-entity camera look-controls>
         <a-entity cursor="fuse: true; fuseTimeout: 500;"
 				  position= "0 0 -5"
-				  geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+				  geometry="primitive: ring; radiusInner: 0.04; radiusOuter: 0.06"
 				  material= "color: black; shader: flat"
 				  event-set__1="_event: mouseenter; color: springgreen"
 				  event-set__2="_event: mouseleave; color: black">
