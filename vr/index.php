@@ -27,7 +27,7 @@
 		</div>
 	</div>
 	
-	<div id="test_2" onclick="off('test_2')" class="test">
+	<div id="test_2" onclick="off('test_2')" class="window">
 		<p>hello world22</p>
 	</div>
     <a-scene vr-mode-ui="enabled: false">
