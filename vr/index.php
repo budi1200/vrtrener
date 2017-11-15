@@ -5,7 +5,7 @@
     <title>VR Raziskovalna</title>
     <meta name="description" content="VR Trener">
     <script src="../scripts/aframe.js"></script>
-	<!--<script src="../scripts/aframe-event-set-component.js"></script>-->
+	<script src="../scripts/aframe-event-set-component.js"></script>
 	<!--<script src="../scripts/set-image.js"></script>-->
 	<!--<script src="../scripts/jquery-3.2.1.min.js"></script>-->
 	<script src="../scripts/custom.js"></script>
