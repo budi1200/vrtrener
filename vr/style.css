@@ -1,9 +1,0 @@
-.test{
-	position: fixed;
-	display: none;
-	height: 100px;
-	width: 100px;
-	background-color: #000;
-	color: #FFF;
-	z-index: 2;
-}

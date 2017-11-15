@@ -6,8 +6,8 @@
     <meta name="description" content="VR Trener">
     <script src="../scripts/aframe.js"></script>
 	<script src="../scripts/aframe-event-set-component.js"></script>
-	<script src="../scripts/set-image.js"></script>
-	<script src="../scripts/jquery-3.2.1.min.js"></script>
+	<!--<script src="../scripts/set-image.js"></script>-->
+	<!--<script src="../scripts/jquery-3.2.1.min.js"></script>-->
 	<script src="../scripts/custom.js"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link rel="stylesheet" type="text/css" href="../vaja_izgled/design.css">
@@ -25,10 +25,6 @@
 				<p>is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have </p>
 			</div>
 		</div>
-	</div>
-	
-	<div id="test_2" onclick="off('test_2')" class="window">
-		<p>hello world22</p>
 	</div>
     <a-scene vr-mode-ui="enabled: false">
 		<!-- 360 Slika -->
@@ -48,7 +44,7 @@
 	  <a-entity camera look-controls>
         <a-entity cursor="fuse: true; fuseTimeout: 500;"
 				  position= "0 0 -5"
-				  geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+				  geometry="primitive: ring; radiusInner: 0.04; radiusOuter: 0.06"
 				  material= "color: black; shader: flat"
 				  event-set__1="_event: mouseenter; color: springgreen"
 				  event-set__2="_event: mouseleave; color: black">
