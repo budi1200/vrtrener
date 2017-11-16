@@ -1,45 +1,43 @@
-h1{
+#tipka_fitnes{
 	text-align:center;
-	color:black;
+	padding-right:5px;
+	padding-bottom:10px;
 }
-table{
-	width:100%;
-	text-align: center;
-}
-#td_fitnes{
-	width:46%;
-	text-align:right;
-	padding-right: 10px;
-}
-#td_izberi{
-	width:54%;
-	text-align:left;
-}
-#td_vr_logo{
-	text-align: center;
-	padding-top: 20px;
-}
-body{
-	background-image: url("slike_prva_stran/nature1.jpg");
-	background-size: 1366px 637px;
-}
-footer{
+#button{
 	text-align:center;
-	letter-spacing: 5px;
-	padding-top: 10px;
+	padding-bottom:5px;
+}
+.footer{
+	text-align:center;
+	letter-spacing:5px;
+	padding-top:10px;
 }
 #quote{
 	text-align:center;
-	font-family: courier new;
+	font-family:courier new;
+	color:white;
+	font-weight:bold;
 }
 #quote_author{
 	text-align:center;
-	font-family: courier new;
-	padding-bottom:30px;
-}
-.button_vhod{
-	text-decoration: none;
+	font-family:courier new;
+	padding-bottom:15px;
+	color:white;
+	font-weight:bold;
 }
 .mySlides {
 	display:none;
+}
+.parent{
+	text-align:center;
+	position:fixed;
+	width:100%;
+	z-index:2;
+}
+.child{
+	text-align:center;
+}
+.slide{
+	position:fixed;
+	z-index:1;
 }
