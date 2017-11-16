@@ -2,6 +2,7 @@
 	text-align:center;
 	padding-right:5px;
 	padding-bottom:10px;
+	color: white;
 }
 #button{
 	text-align:center;
@@ -40,4 +41,7 @@
 .slide{
 	position:fixed;
 	z-index:1;
+}
+body{
+	margin:0;
 }
