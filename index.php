@@ -25,8 +25,8 @@
 					</select>
 				</p>
 			</div>
-			<div id="button">
-				<button class="button_vhod"><a href="vr/index.php">Vhod</a></button>
+			<div id="div_button">
+				<a href="vr/index.php"><button class="button"><span>Vhod</span></button></a>
 			</div>
 			<div class="footer">
 				<img class="image" src="slike_prva_stran/facebook.png" alt="facebook_icon" width="30" height="30">
