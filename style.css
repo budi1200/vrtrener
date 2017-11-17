@@ -10,7 +10,7 @@
 }
 .button {
   border-radius: 4px;
-  background-color: grey;
+  background-color: gray;
   border: none;
   text-align: center;
   font-size: 28px;
@@ -82,23 +82,6 @@
 .slide{
 	position:fixed;
 	z-index:1;
-}
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
 }
 body{
 	margin:0;

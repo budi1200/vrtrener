@@ -3,7 +3,9 @@
 	<head>
 		<title>VR Trener</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="animate.css">
 		<script src="scripts/slide.js"></script>
+        <meta charset="utf-8">
 	</head>
 	<body>
 		<div class="parent">
