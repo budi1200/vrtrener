@@ -29,17 +29,17 @@
     <a-scene vr-mode-ui="enabled: false">
 		<!-- 360 Slika -->
       <a-sky id="img-sky" src="../360/SAM_100_0089.jpg"></a-sky>
-	  
+
 	  <a-entity id="sphere" onclick="setWindow('test_1')" geometry="primitive: sphere" material="color: blue" position="33.154 15.231 3.313" radius="1.25"
 				event-set__enter="_event: click; material.color: yellowgreen;"
 				event-set__leave="_event: mouseleave; material.color: blue;">
 	  </a-entity>
-	  
+
 	  <a-entity id="sphere2" onclick="setWindow('test_2')" geometry="primitive: sphere" material="color: red" position="33.154 15.231 -11.313" radius="1.25"
 				event-set__enter="_event: click; material.color: yellowgreen;"
 				event-set__leave="_event: mouseleave; material.color: blue;">
 	  </a-entity>
-	  
+
 	  <!-- Kamera + cursor -->
 	  <a-entity camera look-controls>
         <a-entity cursor="fuse: true; fuseTimeout: 500;"
