@@ -26,7 +26,7 @@
 				</p>
 			</div>
 			<div id="div_button">
-				<a href="vr/index.php"><button class="button"><span>Vhod</span></button></a>
+				<a href="vr/vr.php"><button class="button"><span>Vhod</span></button></a>
 			</div>
 			<div class="footer">
 				<img class="image" src="slike_prva_stran/facebook.png" alt="facebook_icon" width="30" height="30">
@@ -37,12 +37,12 @@
 			</div>
 		</div>
         <div class="slide">
-			<img class="mySlides" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_1.jpg" width="100%" height="100%">
-			<img class="mySlides" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_2.jpg" width="100%" height="100%">
-			<img class="mySlides" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_3.jpg" width="100%" height="100%">
-			<img class="mySlides" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_4.jpg" width="100%" height="100%">
-			<img class="mySlides" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_5.jpg" width="100%" height="100%">
-			<img class="mySlides" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_6.jpg" width="100%" height="100%">
+			<img class="mySlides fade" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_1.jpg" width="100%" height="100%">
+			<img class="mySlides fade" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_2.jpg" width="100%" height="100%">
+			<img class="mySlides fade" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_3.jpg" width="100%" height="100%">
+			<img class="mySlides fade" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_4.jpg" width="100%" height="100%">
+			<img class="mySlides fade" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_5.jpg" width="100%" height="100%">
+			<img class="mySlides fade" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_6.jpg" width="100%" height="100%">
 		</div>
 		<script>SlideShow()</script>
 	</body>

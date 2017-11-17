@@ -10,15 +10,17 @@
 }
 .button {
   border-radius: 4px;
-  background-color: #AAF9A2;
+  background-color: grey;
   border: none;
   text-align: center;
   font-size: 28px;
   padding: 20px;
-  width: 200px;
+  width: 150px;
+  font-size: 8px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+
 }
 .button span {
   cursor: pointer;
@@ -26,6 +28,7 @@
   position: relative;
   transition: 0.5s;
   color: black;
+  font-size:20px;
 }
 
 .button span:after {
@@ -78,6 +81,23 @@
 .slide{
 	position:fixed;
 	z-index:1;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
 }
 body{
 	margin:0;
