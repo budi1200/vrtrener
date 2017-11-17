@@ -50,18 +50,19 @@
 	letter-spacing:5px;
 	padding-top:10px;
 }
-#quote{
+.text{
+	text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+	color: white;
+	font-weight:bold;
 	text-align:center;
 	font-family:courier new;
-	color:white;
-	font-weight:bold;
+}
+#quote{
 }
 #quote_author{
 	text-align:center;
 	font-family:courier new;
 	padding-bottom:15px;
-	color:white;
-	font-weight:bold;
 }
 .mySlides {
 	display:none;

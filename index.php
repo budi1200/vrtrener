@@ -10,10 +10,10 @@
 			<div class="child">
 				<img src="slike_prva_stran/logo.png" alt="logo" width="225" height="200">
 			</div>
-			<div class="child">
+			<div class="child text">
 				<blockquote id="quote">"Take care of your body. It's the only place you have to live."</blockquote>
 			</div>
-			<div class="child">
+			<div class="child text">
 				<p id="quote_author">Jim Rohn</p>
 			</div>
 			<div class="child">
