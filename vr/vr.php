@@ -9,7 +9,7 @@
 	<!--<script src="../scripts/set-image.js"></script>-->
 	<!--<script src="../scripts/jquery-3.2.1.min.js"></script>-->
 	<script src="../scripts/custom.js"></script>
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="../style.css">
 	<link rel="stylesheet" type="text/css" href="../vaja_izgled/design.css">
   </head>
   <body>
@@ -26,6 +26,7 @@
 			</div>
 		</div>
 	</div>
+    <div id="domov"><a href="../index.php"><button id="gumb-domov" class="button">Domov</button></a></div>
     <a-scene vr-mode-ui="enabled: false">
 		<!-- 360 Slika -->
       <a-sky id="img-sky" src="../360/SAM_100_0089.jpg"></a-sky>

@@ -83,3 +83,17 @@
 body{
 	margin:0;
 }
+#domov{
+    position: fixed;
+    z-index: 99;
+}
+#gumb-domov{
+    background-color: gray;
+    font-size: 14px;
+    width: auto;
+    padding: 10px;
+}
+
+#gumb-domov:hover{
+    background-color: dimgray;
+}
