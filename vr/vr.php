@@ -17,7 +17,7 @@
 		<div class="box_text">
 			<h4>Vaja Brisalci</h4><br>
 			<div class="video">
-				<video width="300" height="400" autoplay loop>
+				<video id="vid" width="300" height="400" loop>
 					<source src="../gif/zunaj/Brisalci.mp4" type="video/mp4">
 				</video>
 			</div>
