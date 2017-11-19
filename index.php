@@ -39,12 +39,12 @@
 			</div>
 		</div>
         <div class="slide">
-			<img class="mySlides fade" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_1.jpg" alt="slika1" width="100" height="100">
-			<img class="mySlides fade" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_2.jpg" alt="slika2" width="100" height="100">
-			<img class="mySlides fade" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_3.jpg" alt="slika3" width="100" height="100">
-			<img class="mySlides fade" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_4.jpg" alt="slika4" width="100" height="100">
-			<img class="mySlides fade" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_5.jpg" alt="slika5" width="100" height="100">
-			<img class="mySlides fade" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_6.jpg" alt="slika6" width="100" height="100">
+			<img class="mySlides fade" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_1.jpg" alt="slika1">
+			<img class="mySlides fade" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_2.jpg" alt="slika2">
+			<img class="mySlides fade" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_3.jpg" alt="slika3">
+			<img class="mySlides fade" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_4.jpg" alt="slika4">
+			<img class="mySlides fade" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_5.jpg" alt="slika5">
+			<img class="mySlides fade" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_6.jpg" alt="slika6">
 		</div>
 		<script>SlideShow()</script>
 	</body>
