@@ -24,10 +24,11 @@ h4{
 	margin-bottom:0px;
 }
 
-@media screen and (min-width:720px){
+@media screen and (max-width:720px){
     .window {
         top: 0;
         left: 0;
         border-radius: 0px;
+        max-width: fit-content;
     }
 }
