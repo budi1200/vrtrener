@@ -24,7 +24,7 @@ h4{
 	margin-bottom:0px;
 }
 
-@media screen and (max-width:720px){
+@media only screen and (max-width: 500px) {
     .window {
         top: 0;
         left: 0;
