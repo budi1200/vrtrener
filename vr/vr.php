@@ -16,9 +16,10 @@
 	<div id="test_1" class="window" onclick="off('test_1')">
 		<div class="box_text">
             <div class="vaja_naslov">
-                <h4>Vaja Brisalci</h4><br>
-                <div id="domov-mobile"><a href="../index.php"><button id="gumb-domov" class="button">Domov</button></a></div>
+                <h4 id="naslov">Vaja Brisalci</h4>
+                <div id="gumb_domov_wrapper"><a href="../index.php"><button class="button gumb-domov">Domov</button></a></div>
             </div>
+            <div class="box_body">
 			<div class="video">
 				<video id="vid" width="300" height="400" loop>
 					<source src="../gif/zunaj/Brisalci.mp4" type="video/mp4">
@@ -27,9 +28,10 @@
 			<div class="opis">
 				<p>is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have </p>
 			</div>
+            </div>
 		</div>
 	</div>
-    <div id="domov"><a href="../index.php"><button id="gumb-domov" class="button">Domov</button></a></div>
+    <div id="domov"><a href="../index.php"><button class="button gumb-domov">Domov</button></a></div>
     <a-scene vr-mode-ui="enabled: false">
 		<!-- 360 Slika -->
       <a-sky id="img-sky" src="../360/SAM_100_0089.jpg"></a-sky>

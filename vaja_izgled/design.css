@@ -27,17 +27,24 @@ h4{
 }
 
 @media only screen and (max-width: 500px) {
+
     .window {
         top: 0;
         left: 0;
         border-radius: 0px;
         max-width: fit-content;
+        height: auto;
     }
     #domov {
-        position: relative;
-        text-align: right;
+        display: none;
     }
-    #domov-mobile{
+
+    #gumb_domov_wrapper{
         display: block;
+    }
+
+    .vaja_naslov{
+    display: flex;
+    justify-content: space-between;
     }
 }
