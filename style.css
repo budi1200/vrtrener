@@ -91,6 +91,11 @@ body{
     position: fixed;
     z-index: 2;
 }
+
+#domov-mobile {
+    display: none;
+}
+
 #gumb-domov{
     background-color: gray;
     font-size: 14px;

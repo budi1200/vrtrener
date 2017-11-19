@@ -37,4 +37,7 @@ h4{
         position: relative;
         text-align: right;
     }
+    #domov-mobile{
+        display: block;
+    }
 }
