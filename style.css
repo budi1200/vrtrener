@@ -89,7 +89,7 @@ body{
 
 #domov{
     position: fixed;
-    z-index: 99;
+    z-index: 2;
 }
 #gumb-domov{
     background-color: gray;
