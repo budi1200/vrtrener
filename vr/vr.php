@@ -13,25 +13,33 @@
 	<link rel="stylesheet" type="text/css" href="../vaja_izgled/design.css">
   </head>
   <body>
+       <!--Okno za vajo-->
 	<div id="test_1" class="window" onclick="off('test_1')">
 		<div class="box_text">
+            <!--Naslov vaje in gumb domov-->
             <div class="vaja_naslov">
                 <h4 id="naslov">Vaja Brisalci</h4>
-                <div id="gumb_domov_wrapper"><a href="../index.php"><button class="button gumb-domov">Domov</button></a></div>
+                <div id="gumb_domov_wrapper"><a href="../index.php"><button class="button gumb-domov">Domov</button></a></div> <!--TODO: Popravek Gumbov-->
+                 <!--TODO: Gumb zapri okno-->
             </div>
+            <!-- Video in besedilo vaje -->
             <div class="box_body">
-			<div class="video">
-				<video id="vid" width="300" height="400" loop>
-					<source src="../gif/zunaj/Brisalci.mp4" type="video/mp4">
-				</video>
-			</div>
-			<div class="opis">
-				<p>is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have </p>
-			</div>
+			     <div class="video">
+				    <video id="vid" width="300" height="400" loop>
+					   <source src="../gif/zunaj/Brisalci.mp4" type="video/mp4">
+				    </video>
+                </div>
+			     <div class="opis">
+				    <p>is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have </p>
+                </div>
             </div>
 		</div>
 	</div>
-    <div id="domov"><a href="../index.php"><button class="button gumb-domov">Domov</button></a></div>
+
+      <!-- Gumb domov za vecje zaslone-->
+    <div id="domov"><a href="../index.php"><button class="button gumb-domov">Domov</button></a></div> <!--TODO: Popravek gumbov-->
+
+        <!--VR-->
     <a-scene vr-mode-ui="enabled: false">
 		<!-- 360 Slika -->
       <a-sky id="img-sky" src="../360/SAM_100_0089.jpg"></a-sky>
@@ -46,7 +54,7 @@
 				event-set__leave="_event: mouseleave; material.color: blue;">
 	  </a-entity>
 
-	  <!-- Kamera + cursor -->
+	   <!-- Kamera + cursor -->
 	  <a-entity camera look-controls>
         <a-entity cursor="fuse: true; fuseTimeout: 500;"
 				  position= "0 0 -5"
