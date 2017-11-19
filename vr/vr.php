@@ -25,7 +25,7 @@
             <!-- Video in besedilo vaje -->
             <div class="box_body">
 			     <div class="video">
-				    <video id="vid" width="300" height="400" loop>
+				    <video id="vid" width="300" height="400" poster="loading.png" loop>
 					   <source src="../gif/zunaj/Brisalci.mp4" type="video/mp4">
 				    </video>
                 </div>
