@@ -15,8 +15,10 @@
   <body>
 	<div id="test_1" class="window" onclick="off('test_1')">
 		<div class="box_text">
-			<h4>Vaja Brisalci</h4><br>
-            <div id="domov-mobile"><a href="../index.php"><button id="gumb-domov" class="button">Domov</button></a></div>
+            <div class="vaja_naslov">
+                <h4>Vaja Brisalci</h4><br>
+                <div id="domov-mobile"><a href="../index.php"><button id="gumb-domov" class="button">Domov</button></a></div>
+            </div>
 			<div class="video">
 				<video id="vid" width="300" height="400" loop>
 					<source src="../gif/zunaj/Brisalci.mp4" type="video/mp4">
