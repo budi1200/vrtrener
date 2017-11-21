@@ -10,7 +10,7 @@
 	<!--<script src="../scripts/jquery-3.2.1.min.js"></script>-->
 	<script src="../scripts/custom.js"></script>
 	<link rel="stylesheet" type="text/css" href="../style.css">
-	<link rel="stylesheet" type="text/css" href="../vaja_izgled/design.css">
+	<link rel="stylesheet" type="text/css" href="vr.css">
   </head>
   <body>
        <!--Okno za vajo-->
