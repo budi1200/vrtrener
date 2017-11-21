@@ -26,6 +26,9 @@ h4{
 	margin-bottom:0px;
 }
 
+#gumb_domov_wrapper{
+    display: none;
+}
 @media only screen and (max-width: 500px) {
 
     .window {
