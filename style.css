@@ -105,15 +105,6 @@ body{
 .gumb-domov:hover{
     background-color: dimgray;
 }
-
-/* Mobile */
-#domov-mobile {
-    display: none;
-}
-
-#gumb_domov_wrapper{
-    display: none;
-}
 .animate-left{
     position:relative;
     animation:animateleft 2s

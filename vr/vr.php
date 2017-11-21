@@ -10,7 +10,7 @@
 	<!--<script src="../scripts/jquery-3.2.1.min.js"></script>-->
 	<script src="../scripts/custom.js"></script>
 	<link rel="stylesheet" type="text/css" href="../style.css">
-	<link rel="stylesheet" type="text/css" href="../vaja_izgled/design.css">
+	<link rel="stylesheet" type="text/css" href="vr.css">
   </head>
   <body>
        <!--Okno za vajo-->
@@ -40,7 +40,7 @@
     <div id="domov"><a href="../index.php"><button class="button gumb-domov">Domov</button></a></div> <!--TODO: Popravek gumbov-->
 
         <!--VR-->
-    <a-scene vr-mode-ui="enabled: false">
+    <a-scene>
 		<!-- 360 Slika -->
       <a-sky id="img-sky" src="../360/SAM_100_0089.jpg"></a-sky>
 
