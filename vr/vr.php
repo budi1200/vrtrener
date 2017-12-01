@@ -51,6 +51,12 @@
         </a-assets>
         <a-sky id="img-sky" src="../360/SAM_100_0089.jpg"></a-sky>
 
+        <a-text value="Culpa ne ullamco ita dolore, a pariatur an incurreret. A dolor aliquip si veniam
+                       voluptate se dolore anim, ea quae singulis despicationes, mentitum exercitation
+                       ea eiusmod. Summis e litteris do amet ad legam expetendis est quae sint ex magna
+                      ita duis duis legam id quo o
+                       coniunctione ex qui hic enim sint velit, ita malis varias do possumus, hic
+                       quorum quae dolor ingeniis." geometry="primitive: plane; height: auto; width: auto" color="#000" scale="20 20 0.01" position="54.768 36.445 43.172" rotation="0 -104.83 0.32"></a-text>
         <a-plane id="plan" visible="false" src="#vide" height="50" width="35" position="56.823 12.895 27.601" rotation="0 -103 0"></a-plane>
         <a-plane id="plan2" visible="false" height="52" width="60" position="56.823 13.44 40.571" rotation="0 -103 0" material=""></a-plane>
 
@@ -66,7 +72,10 @@
             </a-entity>
         </a-entity>
     </a-scene>
-    <script>checkVR();</script>
+    <script>
+        checkVR();
+
+    </script>
 </body>
 
 </html>
