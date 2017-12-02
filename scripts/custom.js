@@ -13,15 +13,14 @@ function checkVR(){
 });
 }
 
-function setWindow(el_id, vr_id, vr_id2) {
+function setWindow(el_id, vr_id) {
+    var vid = document.getElementById("vid");
     if(fs){
         var el = document.querySelector('#' + vr_id);
         el.setAttribute("visible", true);
-        var el2 = document.querySelector('#' + vr_id2);
-        el2.setAttribute("visible", true);
+        vid.play();
     }else if(!fs){
         var test = document.getElementById(el_id);
-        var vid = document.getElementById("vid");
         test.style.opacity = '0.9';
         test.style.pointerEvents = 'auto';
         vid.play();

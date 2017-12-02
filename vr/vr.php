@@ -44,18 +44,17 @@
     <!-- Gumb domov za vecje zaslone-->
     <div id="domov"><a href="../index.php"><button class="button gumb-domov">Domov</button></a></div>
     <!--TODO: Popravek gumbov-->
-
+    <script>
+    canv();
+    </script>
     <!--VR-->
     <a-scene>
         <!-- 360 Slika -->
-        <a-assets>
-            <video id="vide" src="../gif/zunaj/Brisalci.mp4" autoplay loop></video>
-        </a-assets>
         <a-sky id="img-sky" src="../360/SAM_100_0089.jpg"></a-sky>
 
-        <a-plane id="plan2" visible="false" height="52" width="60" position="56.823 13.44 40.571" rotation="0 -103 0" material=""></a-plane>
+        <a-plane id="plan" visible="false" src="#canv" height="52" width="60" position="56.823 12.895 27.601" rotation="0 -103 0"></a-plane>
 
-        <a-entity id="sphere" onclick="setWindow('test_1', 'plan', 'plan2')" geometry="primitive: sphere" material="color: blue" position="33.154 15.231 3.313" radius="1.25" event-set__enter="_event: click; material.color: yellowgreen;" event-set__leave="_event: mouseleave; material.color: blue;">
+        <a-entity id="sphere" onclick="setWindow('test_1', 'plan')" geometry="primitive: sphere" material="color: blue" position="33.154 15.231 3.313" radius="1.25" event-set__enter="_event: click; material.color: yellowgreen;" event-set__leave="_event: mouseleave; material.color: blue;">
         </a-entity>
 
         <a-entity id="sphere2" onclick="setWindow('test_2')" geometry="primitive: sphere" material="color: red" position="33.154 15.231 -11.313" radius="1.25" event-set__enter="_event: click; material.color: yellowgreen;" event-set__leave="_event: mouseleave; material.color: blue;">
@@ -69,7 +68,6 @@
     </a-scene>
     <script>
         checkVR();
-        canv();
     </script>
 </body>
 
