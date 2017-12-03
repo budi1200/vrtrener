@@ -29,8 +29,9 @@
             <!-- Video in besedilo vaje -->
             <div class="box_body">
                 <div class="video">
-                    <video id="vid" width="300" height="400" poster="loading.png" loop>
-					   <source src="../gif/zunaj/Brisalci.mp4" type="video/mp4">
+                    <video id="vid" width="300" height="400" poster="loading.png" autoplay muted loop>
+                        <!--<source src="../gif/zunaj/Brisalci.mp4" type="video/mp4">-->
+                        <source src="Brisalci.webm" type="video/webm">
 				    </video>
                 </div>
                 <div class="opis">
@@ -41,6 +42,7 @@
     </div>
 
     <canvas id="canv" width="500" height="500"></canvas>
+
     <!-- Gumb domov za vecje zaslone-->
     <div id="domov"><a href="../index.php"><button class="button gumb-domov">Domov</button></a></div>
     <!--TODO: Popravek gumbov-->

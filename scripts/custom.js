@@ -35,11 +35,6 @@ function off(el_id) {
     vid.pause();
 }
 
-/*function setVR(el_id) {
-    var el = document.querySelector('#' + el_id);
-    el.setAttribute("visible", true);
-}*/
-
 function clearVR(el_id) {
     var el = document.querySelector('#' + el_id);
     el.setAttribute("visible", false);
