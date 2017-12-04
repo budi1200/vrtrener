@@ -8,9 +8,13 @@ var fs = false;
 
 function checkVR(){
     document.querySelector('a-scene').addEventListener('enter-vr', function () {
-    console.log("ENTERED VR");
+    console.log("VR ENTER");
     fs = true;
 });
+    document.querySelector('a-scene').addEventListener('exit-vr', function () {
+        console.log("VR EXIT");
+        fs = false;
+    });
 }
 
 function setWindow(el_id, vr_id) {
