@@ -30,7 +30,7 @@
             <div class="box_body">
                 <div class="video">
                     <video id="vid" width="300" height="400" poster="loading.png" autoplay muted loop>
-                        <!--<source src="../gif/zunaj/Brisalci.mp4" type="video/mp4">-->
+                        <source src="../gif/zunaj/Brisalci.mp4" type="video/mp4">
                         <source src="Brisalci.webm" type="video/webm">
 				    </video>
                 </div>
