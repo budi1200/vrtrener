@@ -22,8 +22,8 @@
             <!--Naslov vaje in gumb domov-->
             <div class="vaja_naslov">
                 <h4 id="naslov">Vaja Brisalci</h4>
-                <div id="gumb_domov_wrapper"><a href="../index.php"><button class="button gumb-domov">Domov</button></a></div>
-                <!--TODO: Popravek Gumbov-->
+                <div id="gumb_domov_wrapper"><a class="button gumb-domov" href="../index.php">Domov</a></div>
+
                 <!--TODO: Gumb zapri okno-->
             </div>
             <!-- Video in besedilo vaje -->
@@ -44,7 +44,7 @@
     <canvas id="canv" width="500" height="500"></canvas>
 
     <!-- Gumb domov za vecje zaslone-->
-    <div id="domov"><a href="../index.php"><button class="button gumb-domov">Domov</button></a></div>
+    <div id="domov"><a class="button gumb-domov" href="../index.php">Domov</a></div>
     <!--TODO: Popravek gumbov-->
     <script>
     canv();
