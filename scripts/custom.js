@@ -1,9 +1,3 @@
-/*var mouseX, mouseY;
-$(document).mousemove(function(e) {
-    mouseX = e.pageX;
-    mouseY = e.pageY;
-}).mouseover();
-*/
 var fs = false;
 
 function checkVR(){
@@ -22,17 +16,16 @@ function setWindow(el_id, vr_id, vaja_id) {
     if(fs){
         var el = document.querySelector('#' + vr_id);
         nastaviVajo(vaja_id);
-            setTimeout(function(){
                 console.log("waiting");
                 canv();
                 vid.load();
                 el.setAttribute("visible", true);
-            }, 500);
     }else if(!fs){
         var test = document.getElementById(el_id);
         nastaviVajo(vaja_id);
         test.style.opacity = '0.9';
         test.style.pointerEvents = 'auto';
+        vid.play();
     }
 }
 
@@ -77,6 +70,6 @@ function nastaviVajo(str) {
         vid.load();
     }
   }
-  xmlhttp.open("GET","vaja.php?q="+str,true);
+  xmlhttp.open("GET","vaja.php?q="+str,false);
   xmlhttp.send();
 }
