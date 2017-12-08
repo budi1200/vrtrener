@@ -21,7 +21,7 @@
         <div class="box_text">
             <!--Naslov vaje in gumb domov-->
             <div class="vaja_naslov">
-                <h4 id="naslov">Vaja Brisalci</h4>
+                <h4 id="naslov"></h4> <!-- NASLOV VAJE -->
                 <div id="gumb_domov_wrapper"><a class="button gumb-domov" href="../index.php">Domov</a></div>
 
                 <!--TODO: Gumb zapri okno-->
@@ -30,12 +30,11 @@
             <div class="box_body">
                 <div class="video">
                     <video id="vid" width="300" height="400" poster="loading.png" autoplay muted loop>
-                        <source src="../gif/zunaj/Brisalci.mp4" type="video/mp4">
-                        <source src="Brisalci.webm" type="video/webm">
+                        <source id="url" src="" type="video/mp4">
 				    </video>
                 </div>
                 <div class="opis">
-                    <p id="opis">is a pseudo-Latin text used in web design, typography, layout, and printing in place of English to emphasise design elements over content. It's also called placeholder (or filler) text. It's a convenient tool for mock-ups. It helps to outline the visual elements of a document or presentation, eg typography, font, or layout. Lorem ipsum is mostly a part of a Latin text by the classical author and philosopher Cicero. Its words and letters have </p>
+                    <p id="opis"></p>
                 </div>
             </div>
         </div>
@@ -46,9 +45,7 @@
     <!-- Gumb domov za vecje zaslone-->
     <div id="domov"><a class="button gumb-domov" href="../index.php">Domov</a></div>
     <!--TODO: Popravek gumbov-->
-    <script>
-    canv();
-    </script>
+
     <!--VR-->
     <a-scene>
         <!-- 360 Slika -->
@@ -56,10 +53,10 @@
 
         <a-plane id="plan" visible="false" src="#canv" height="52" width="60" position="56.823 12.895 27.601" rotation="0 -103 0"></a-plane>
 
-        <a-entity id="sphere" onclick="setWindow('test_1', 'plan')" geometry="primitive: sphere" material="color: blue" position="33.154 15.231 3.313" radius="1.25" event-set__enter="_event: click; material.color: yellowgreen;" event-set__leave="_event: mouseleave; material.color: blue;">
+        <a-entity id="sphere" onclick="setWindow('test_1', 'plan', '2')" geometry="primitive: sphere" material="color: blue" position="33.154 15.231 3.313" radius="1.25" event-set__enter="_event: click; material.color: yellowgreen;" event-set__leave="_event: mouseleave; material.color: blue;">
         </a-entity>
 
-        <a-entity id="sphere2" onclick="setWindow('test_2')" geometry="primitive: sphere" material="color: red" position="33.154 15.231 -11.313" radius="1.25" event-set__enter="_event: click; material.color: yellowgreen;" event-set__leave="_event: mouseleave; material.color: blue;">
+        <a-entity id="sphere2" onclick="setWindow('test_1', 'plan', '1')" geometry="primitive: sphere" material="color: red" position="33.154 15.231 -11.313" radius="1.25" event-set__enter="_event: click; material.color: yellowgreen;" event-set__leave="_event: mouseleave; material.color: blue;">
         </a-entity>
 
         <!-- Kamera + cursor -->
