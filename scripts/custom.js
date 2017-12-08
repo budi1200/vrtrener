@@ -47,10 +47,6 @@ function clearVR(el_id) {
 }
 
 function nastaviVajo(str) {
-  if (str=="") {
-    document.getElementById("naslov").innerHTML="";
-    return;
-  }
   if (window.XMLHttpRequest) {
     // code for IE7+, Firefox, Chrome, Opera, Safari
     xmlhttp=new XMLHttpRequest();
@@ -59,14 +55,11 @@ function nastaviVajo(str) {
     if (this.readyState==4 && this.status==200) {
         parser = new DOMParser();
         xmlDoc = parser.parseFromString(this.responseText,"text/xml");
-        var ime = xmlDoc.getElementById('ime').innerHTML;
-        console.log("IME: " + ime);
-        var opis = xmlDoc.getElementById('opis').innerHTML;
-        var url = xmlDoc.getElementById('url').innerHTML;
-        document.getElementById("naslov").innerHTML = ime;
-        document.getElementById("opis").innerHTML = opis;
-        document.getElementById("url").src=(url);
-        console.log(this.responseText);
+
+        document.getElementById("naslov").innerHTML = xmlDoc.getElementById('ime').innerHTML;
+        document.getElementById("opis").innerHTML = xmlDoc.getElementById('opis').innerHTML;
+        document.getElementById("url").src = (xmlDoc.getElementById('url').innerHTML);
+        //console.log(this.responseText);
         vid.load();
     }
   }
