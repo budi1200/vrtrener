@@ -4,9 +4,12 @@
 <?php
     include('../connect.php');
 
-    if (!$conn) {
-        die('Could not connect: ' . mysqli_error($conn));
-    }
+if(!$conn){
+    $error = error_get_last();
+    echo "Connection failed. Error was: ". $error['message']. "\n";
+} else {
+    echo "Connection succesful.\n";
+}
 
     $st = intval($_GET['q']);
     $q = "SELECT * FROM Videi WHERE ID=$st";
