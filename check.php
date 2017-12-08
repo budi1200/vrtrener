@@ -1,4 +1,5 @@
 <?php
+    echo 'conn';
     include('connect.php');
     echo 'connection ';
     if($app) {
