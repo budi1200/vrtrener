@@ -12,7 +12,7 @@ if(!$conn){
 }
 
     $st = intval($_GET['q']);
-    $q = "SELECT * FROM Videi WHERE ID=$st";
+    $q = "SELECT * FROM vaje WHERE id=$st";
     $result = pg_query($conn, $q);
     while ($row = pg_fetch_assoc($result)) {
         echo "<span id='ime'>" . $row['ime'] . "</span>";
