@@ -1,17 +1,19 @@
-var fs = false;
-var open = false;
+var fs = false; // VR nacin
+var open = false; // Stanje okna v vr nacinu
 
+// Preverjanje ce je uporabnik v VR nacinu
 function checkVR(){
     document.querySelector('a-scene').addEventListener('enter-vr', function () {
-    console.log("VR ENTER");
-    fs = true;
-});
+        console.log("VR ENTER");
+        fs = true;
+    });
     document.querySelector('a-scene').addEventListener('exit-vr', function () {
         console.log("VR EXIT");
         fs = false;
     });
 }
 
+// Prikaz okna za vajo
 function setWindow(vr_id, vaja_id) {
     var vid = document.getElementById("vid");
     if(fs){ //VR Nacin
@@ -23,7 +25,7 @@ function setWindow(vr_id, vaja_id) {
                 vid.load();
                 el.setAttribute("visible", true);
                 open = true;
-        }else if(open){
+        }else if(open){ // Zapri okno v vr nacinu ce je odprto
             var el = document.querySelector('#' + vr_id);
             el.setAttribute("visible", false);
             open = false;
@@ -37,6 +39,7 @@ function setWindow(vr_id, vaja_id) {
     }
 }
 
+//Zapri okno v osnovnem nacinu
 function off(el_id) {
     var a = document.getElementById(el_id);
     var vid = document.getElementById("vid");
@@ -49,24 +52,26 @@ function off(el_id) {
     vid.load();
 }
 
+//Odstrani VR okno
 function clearVR(el_id) {
     var el = document.querySelector('#' + el_id);
     el.setAttribute("visible", false);
 }
 
+// Pridobitev podatkov iz podatkovne baze
 function nastaviVajo(str) {
   if (window.XMLHttpRequest) {
     xmlhttp=new XMLHttpRequest();
   }
   xmlhttp.onreadystatechange=function() {
     if (this.readyState==4 && this.status==200) {
+        // Parse string
         parser = new DOMParser();
         xmlDoc = parser.parseFromString(this.responseText,"text/xml");
 
         document.getElementById("naslov").innerHTML = xmlDoc.getElementById('ime').innerHTML;
         document.getElementById("opis").innerHTML = xmlDoc.getElementById('opis').innerHTML;
         document.getElementById("url").src = (xmlDoc.getElementById('url').innerHTML);
-        //console.log(this.responseText);
         vid.load();
     }
   }
