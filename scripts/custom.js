@@ -63,6 +63,10 @@ function nastaviVajo(str) {
         vid.load();
     }
   }
-  xmlhttp.open("GET","vaja.php?q="+str,false);
+  if(fs){
+    xmlhttp.open("GET","vaja.php?q="+str,false);
+  }else{
+    xmlhttp.open("GET","vaja.php?q="+str,true);
+  }
   xmlhttp.send();
 }
