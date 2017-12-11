@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="vr.css">
 </head>
 
-<body>
+<body onload="checkVR()">
     <!--Okno za vajo-->
     <div id="okno_vaja" class="window" onclick="off('okno_vaja')">
         <div class="box_text">
@@ -44,7 +44,6 @@
 
     <!-- Gumb domov za vecje zaslone-->
     <div id="domov"><a class="button gumb-domov" href="../index.php">Domov</a></div>
-    <!--TODO: Popravek gumbov-->
 
     <!--VR-->
     <a-scene>
@@ -65,9 +64,6 @@
             </a-entity>
         </a-entity>
     </a-scene>
-    <script>
-        checkVR();
-    </script>
 </body>
 
 </html>

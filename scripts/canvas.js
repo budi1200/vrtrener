@@ -2,11 +2,11 @@ function canv(){
 var canvas = document.getElementById("canv");
 var canv = canvas.getContext("2d");
 var video = document.getElementById('vid');
-    console.log(video);
+    //console.log(video);
 var opis = document.getElementById("opis").innerHTML;
-    console.log(opis);
+    //console.log(opis);
 var naslov = document.getElementById("naslov").innerHTML;
-    console.log(naslov);
+    //console.log(naslov);
 var text_x = 326;
 var text_y = 61;
 var text_maxWidth = 164;
