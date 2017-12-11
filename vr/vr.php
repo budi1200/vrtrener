@@ -17,7 +17,7 @@
 
 <body>
     <!--Okno za vajo-->
-    <div id="test_1" class="window" onclick="off('test_1')">
+    <div id="okno_vaja" class="window" onclick="off('okno_vaja')">
         <div class="box_text">
             <!--Naslov vaje in gumb domov-->
             <div class="vaja_naslov">
@@ -53,10 +53,10 @@
 
         <a-plane id="plan" visible="false" src="#canv" height="52" width="60" position="56.823 12.895 27.601" rotation="0 -103 0"></a-plane>
 
-        <a-entity id="sphere" onclick="setWindow('test_1', 'plan', '2')" geometry="primitive: sphere" material="color: blue" position="33.154 15.231 3.313" radius="1.25" event-set__enter="_event: click; material.color: yellowgreen;" event-set__leave="_event: mouseleave; material.color: blue;">
+        <a-entity id="sphere" onclick="setWindow('plan', '1')" geometry="primitive: sphere" material="color: blue" position="33.154 15.231 3.313" radius="1.25" event-set__enter="_event: click; material.color: yellowgreen;" event-set__leave="_event: mouseleave; material.color: blue;">
         </a-entity>
 
-        <a-entity id="sphere2" onclick="setWindow('test_1', 'plan', '1')" geometry="primitive: sphere" material="color: red" position="33.154 15.231 -11.313" radius="1.25" event-set__enter="_event: click; material.color: yellowgreen;" event-set__leave="_event: mouseleave; material.color: blue;">
+        <a-entity id="sphere2" onclick="setWindow('plan', '2')" geometry="primitive: sphere" material="color: red" position="33.154 15.231 -11.313" radius="1.25" event-set__enter="_event: click; material.color: yellowgreen;" event-set__leave="_event: mouseleave; material.color: blue;">
         </a-entity>
 
         <!-- Kamera + cursor -->

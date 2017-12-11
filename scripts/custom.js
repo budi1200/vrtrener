@@ -1,4 +1,5 @@
 var fs = false;
+var open = false;
 
 function checkVR(){
     document.querySelector('a-scene').addEventListener('enter-vr', function () {
@@ -11,17 +12,24 @@ function checkVR(){
     });
 }
 
-function setWindow(el_id, vr_id, vaja_id) {
+function setWindow(vr_id, vaja_id) {
     var vid = document.getElementById("vid");
-    if(fs){
+    if(fs){ //VR Nacin
         var el = document.querySelector('#' + vr_id);
-        nastaviVajo(vaja_id);
+        if(!open){
+            nastaviVajo(vaja_id);
                 console.log("waiting");
                 canv();
                 vid.load();
                 el.setAttribute("visible", true);
-    }else if(!fs){
-        var test = document.getElementById(el_id);
+                open = true;
+        }else if(open){
+            var el = document.querySelector('#' + vr_id);
+            el.setAttribute("visible", false);
+            open = false;
+        }
+    }else if(!fs){ //Normalno okno
+        var test = document.getElementById('okno_vaja');
         nastaviVajo(vaja_id);
         test.style.opacity = '0.9';
         test.style.pointerEvents = 'auto';
@@ -48,7 +56,6 @@ function clearVR(el_id) {
 
 function nastaviVajo(str) {
   if (window.XMLHttpRequest) {
-    // code for IE7+, Firefox, Chrome, Opera, Safari
     xmlhttp=new XMLHttpRequest();
   }
   xmlhttp.onreadystatechange=function() {
