@@ -4,10 +4,15 @@
 		<title>VR Trener</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" type="text/css" href="animate.css">
-		<script src="scripts/slide.js"></script>
+		<!--<script src="scripts/slide.js"></script>-->
+        <!--<script src="../scripts/jquery-3.2.1.min.js"></script>-->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="scripts/animate.js"></script>
         <meta charset="utf-8">
 	</head>
 	<body>
+        <h1>Nejc</h1>
 		<div class="parent">
 			<div class="child">
 				<img src="slike_prva_stran/logo.png" alt="logo" width="225" height="200">
@@ -38,14 +43,16 @@
 				<img class="image" src="slike_prva_stran/youtube.png" alt="youtube_icon" width="30" height="30">
 			</div>
 		</div>
-        <div class="slide">
-			<img class="mySlides animate-right" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_1.jpg" alt="slika1">
-			<img class="mySlides animate-right" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_2.jpg" alt="slika2">
-			<img class="mySlides animate-right" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_3.jpg" alt="slika3">
-			<img class="mySlides animate-right" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_4.jpg" alt="slika4">
-			<img class="mySlides animate-right" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_5.jpg" alt="slika5">
-			<img class="mySlides animate-right" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_6.jpg" alt="slika6">
-		</div>
-		<script>SlideShow()</script>
+        <div id="slider">
+            <ul class="slides">
+                <img class="slide" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_1.jpg" alt="slika1">
+                <img class="slide" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_2.jpg" alt="slika2">
+                <img class="slide" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_3.jpg" alt="slika3">
+                <img class="slide" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_4.jpg" alt="slika4">
+                <img class="slide" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_5.jpg" alt="slika5">
+                <img class="slide" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_6.jpg" alt="slika6">
+                <img class="slide" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_1.jpg" alt="slika1">
+            </ul>
+        </div>
 	</body>
 </html>
