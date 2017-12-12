@@ -12,7 +12,6 @@
         <meta charset="utf-8">
 	</head>
 	<body>
-        <h1>Nejc</h1>
 		<div class="parent">
 			<div class="child">
 				<img src="slike_prva_stran/logo.png" alt="logo" width="225" height="200">
