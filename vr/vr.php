@@ -24,7 +24,7 @@
                 <h4 id="naslov"></h4> <!-- NASLOV VAJE -->
                 <div id="gumb_domov_wrapper"><a class="button gumb-domov" href="../index.php">Domov</a></div>
 
-                <!--TODO: Gumb zapri okno-->
+                <!--TODO: vGumb zapri okno-->
             </div>
             <!-- Video in besedilo vaje -->
             <div class="box_body">
