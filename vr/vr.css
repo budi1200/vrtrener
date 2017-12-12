@@ -28,13 +28,20 @@ h4{
 #gumb_domov_wrapper{
     display: none;
 }
+
+#canv{
+    background-color:#CCC;
+	border-radius:8px;
+    display: none;
+}
+
 @media only screen and (max-width: 500px) {
 
     .window {
         top: 0;
         left: 0;
         border-radius: 0px;
-        max-width: fit-content;
+        max-width: 100%;
         height: auto;
     }
     #domov {
