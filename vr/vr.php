@@ -58,6 +58,9 @@
         <a-entity id="sphere2" onclick="setWindow('plan', '2')" geometry="primitive: sphere" material="color: red" position="33.154 15.231 -11.313" radius="1.25" event-set__enter="_event: click; material.color: yellowgreen;" event-set__leave="_event: mouseleave; material.color: blue;">
         </a-entity>
 
+        <a-entity id="sphere3" onclick="setWindow('plan', '3')" geometry="primitive: sphere" material="color: green" position="30.154 15.231 -14.313" radius="1.25" event-set__enter="_event: click; material.color: yellowgreen;" event-set__leave="_event: mouseleave; material.color: blue;">
+        </a-entity>
+
         <!-- Kamera + cursor -->
         <a-entity camera look-controls>
             <a-entity cursor="fuse: true; fuseTimeout: 500;" position="0 0 -5" geometry="primitive: ring; radiusInner: 0.04; radiusOuter: 0.06" material="color: black; shader: flat" event-set__1="_event: mouseenter; color: springgreen" event-set__2="_event: mouseleave; color: black">
