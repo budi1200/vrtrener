@@ -14,20 +14,23 @@ function checkVR(){
 }
 
 // Prikaz okna za vajo
-function setWindow(vr_id, vaja_id) {
+function setWindow(item_id, vr_id, vaja_id) {
     var vid = document.getElementById("vid");
+    var el = document.querySelector('#' + vr_id);
+    var il = document.querySelector('#' + item_id);
+
     if(fs){ //VR Nacin
-        var el = document.querySelector('#' + vr_id);
         if(!open){
             nastaviVajo(vaja_id);
                 console.log("waiting");
                 canv();
                 vid.load();
                 el.setAttribute("visible", true);
+                il.setAttribute("material", "color: red");
                 open = true;
         }else if(open){ // Zapri okno v vr nacinu ce je odprto
-            var el = document.querySelector('#' + vr_id);
             el.setAttribute("visible", false);
+            il.setAttribute("material", "color: blue");
             open = false;
         }
     }else if(!fs){ //Normalno okno
