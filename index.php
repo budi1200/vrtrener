@@ -12,7 +12,6 @@
         <meta charset="utf-8">
 	</head>
 	<body>
-        <h1>Nejc</h1>
 		<div class="parent">
 			<div class="child">
 				<img src="slike_prva_stran/logo.png" alt="logo" width="225" height="200">
@@ -43,6 +42,7 @@
 				<img class="image" src="slike_prva_stran/youtube.png" alt="youtube_icon" width="30" height="30">
 			</div>
 		</div>
+        <div class="container">
         <div id="slider">
             <ul class="slides">
                 <img class="slide" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_1.jpg" alt="slika1">
@@ -53,6 +53,7 @@
                 <img class="slide" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_6.jpg" alt="slika6">
                 <img class="slide" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_1.jpg" alt="slika1">
             </ul>
+        </div>
         </div>
 	</body>
 </html>
