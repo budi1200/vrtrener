@@ -1,6 +1,6 @@
 $(function() {
     //configuration
-    var width = 1366;
+    var width = $( window ).width();
     var animationSpeed = 1000;
     var pause = 3000;
     var currentSlide = 1;
