@@ -24,7 +24,7 @@
                 <h4 id="naslov"></h4> <!-- NASLOV VAJE -->
                 <div id="gumb_domov_wrapper"><a class="button gumb-domov" href="../index.php">Domov</a></div>
 
-                <!--TODO: vGumb zapri okno-->
+                <!--TODO: Gumb zapri okno-->
             </div>
             <!-- Video in besedilo vaje -->
             <div class="box_body">
@@ -55,10 +55,10 @@
         <a-entity id="sphere" onclick="setWindow('sphere', 'plan', '1')" geometry="primitive: sphere" material="color: blue" position="33.154 15.231 3.313" radius="1.25">
         </a-entity>
 
-        <a-entity id="sphere2" onclick="setWindow('sphere2', 'plan', '2')" geometry="primitive: sphere" material="color: red" position="33.154 15.231 -11.313" radius="1.25">
+        <a-entity id="sphere2" onclick="setWindow('sphere2', 'plan', '2')" geometry="primitive: sphere" material="color: blue" position="33.154 15.231 -11.313" radius="1.25">
         </a-entity>
 
-        <a-entity id="sphere3" onclick="setWindow('sphere3', 'plan', '3')" geometry="primitive: sphere" material="color: green" position="30.154 15.231 -14.313" radius="1.25">
+        <a-entity id="sphere3" onclick="setWindow('sphere3', 'plan', '3')" geometry="primitive: sphere" material="color: blue" position="30.154 15.231 -14.313" radius="1.25">
         </a-entity>
 
         <!-- Kamera + cursor -->
