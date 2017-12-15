@@ -43,13 +43,13 @@
         <div class="container">
         <div id="slider">
             <ul class="slides">
-                <img class="slide" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_1.jpg" alt="slika1">
-                <img class="slide" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_2.jpg" alt="slika2">
-                <img class="slide" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_3.jpg" alt="slika3">
-                <img class="slide" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_4.jpg" alt="slika4">
-                <img class="slide" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_5.jpg" alt="slika5">
-                <img class="slide" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_6.jpg" alt="slika6">
-                <img class="slide" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_1.jpg" alt="slika1">
+                <li class="slide"><img class="images" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_1.jpg" alt="slika1"></li>
+                <li class="slide"><img class="images" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_2.jpg" alt="slika2"></li>
+                <li class="slide"><img class="images" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_3.jpg" alt="slika3"></li>
+                <li class="slide"><img class="images" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_4.jpg" alt="slika4"></li>
+                <li class="slide"><img class="images" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_5.jpg" alt="slika5"></li>
+                <li class="slide"><img class="images" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_6.jpg" alt="slika6"></li>
+                <li class="slide"><img class="images" src="slike_postopek_dela/fitnes_gim_zunaj/fitnes_gim_1.jpg" alt="slika1"></li>
             </ul>
         </div>
         </div>
