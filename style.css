@@ -82,7 +82,7 @@
 #slider .slides{
 	display: block;
     width: 10000px;
-    height: 600px;
+    height: 100%;
     margin: 0px;
     padding: 0px;
 }
@@ -98,7 +98,7 @@ li{
     width: 100%;
     height: 100%;
 }
-.images{
+.image{
     width: 100%;
     height: 100%;
 }
@@ -128,17 +128,3 @@ body{
 .gumb-domov:hover{
     background-color: dimgray;
 }
-/*.animate-right{
-    position:relative;
-    animation:animateright 5s
-}
-@keyframes animateright{
-from{
-    right:0px;
-    opacity:1
-    }
-to{
-    right:100%;
-    opacity:1
-    }
-}*/
