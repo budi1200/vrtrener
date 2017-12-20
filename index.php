@@ -3,7 +3,7 @@
 	<head>
 		<title>VR Trener</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="stylesheet" type="text/css" href="animate.css">
+		<link rel="stylesheet" type="text/css" href="scripts/animate.css">
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script type="text/javascript" src="scripts/animate.js"></script>
@@ -30,14 +30,16 @@
 				</p>
 			</div>
 			<div id="div_button">
+                <a href="stran_navodila/navodila.html"><button class="button"><span>Navodila</span></button></a>
 				<a href="vr/vr.php"><button class="button"><span>Vhod</span></button></a> <!--TODO: Popravek gumbov-->
+                <a href="stran_opis/opis.html"><button class="button"><span>Opis</span></button></a>
 			</div>
 			<div class="footer">
-				<img src="slike_prva_stran/facebook.png" alt="facebook_icon" width="30" height="30">
-				<img src="slike_prva_stran/twitter.png" alt="twitter_icon" width="30" height="30">
-				<img src="slike_prva_stran/instagram.png" alt="instagram_icon" width="30" height="30">
-				<img src="slike_prva_stran/email.png" alt="email_icon" width="30" height="30">
-				<img src="slike_prva_stran/youtube.png" alt="youtube_icon" width="30" height="30">
+                <a href="https://www.facebook.com/VR-Trener-526799451008707/"><img src="slike_prva_stran/facebook.png" alt="facebook_icon" width="30" height="30"></a>
+                <a href="https://twitter.com/"><img src="slike_prva_stran/twitter.png" alt="twitter_icon" width="30" height="30"></a>
+                <a href="https://www.instagram.com/vrtrener/"><img src="slike_prva_stran/instagram.png" alt="instagram_icon" width="30" height="30"></a>
+                <a href=""><img src="slike_prva_stran/email.png" alt="email_icon" width="30" height="30"></a>
+                <a href="https://www.youtube.com/channel/UCkKLyU4n9NgGFFmnDZRKHlw?view_as=subscriber"><img src="slike_prva_stran/youtube.png" alt="youtube_icon" width="30" height="30"></a>
 			</div>
 		</div>
         <div class="container">
