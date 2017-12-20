@@ -4,13 +4,13 @@
 <head>
     <title>VR Trener</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="scripts/animate.css">
+    <link rel="stylesheet" type="text/css" href="animate.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="js/animate.js"></script>
-    <script type="text/javascript" src="js/dynamicpage.js"
+    <script type="text/javascript" src="js/dynamicpage.js"></script>
     <meta charset="utf-8">
 </head>
 
