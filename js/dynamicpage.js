@@ -1,5 +1,7 @@
 $(function() {
 
+    if(Modernizr.history){
+
     var newHash      = "",
         $mainContent = $("#main-content"),
         $pageWrap    = $("#page-wrap"),
@@ -9,34 +11,36 @@ $(function() {
     $pageWrap.height($pageWrap.height());
     baseHeight = $pageWrap.height() - $mainContent.height();
 
-    $(".div_button").delegate("a", "click", function() {
-        window.location.hash = $(this).attr("href");
+    $("nav").delegate("a.dynamic", "click", function() {
+        _link = $(this).attr("href");
+        history.pushState(null, null, _link);
+        loadContent(_link);
         return false;
     });
 
-    $(window).bind('hashchange', function(){
-
-        newHash = window.location.hash.substring(1);
-
-        if (newHash) {
-            $mainContent
+    function loadContent(href){
+        $mainContent
                 .find("#guts")
                 .fadeOut(200, function() {
-                    $mainContent.hide().load(newHash + " #guts", function() {
-                        $mainContent.fadeIn(500, function() {
+                    $mainContent.hide().load(href + " #guts", function() {
+                        $mainContent.fadeIn(200, function() {
                             $pageWrap.animate({
-                                height: baseHeight + $mainContent.height() + "px"
+                                height: "100%"
                             });
                         });
-                        id = 1;
-                        $(".div_button a").removeClass("current");
-                        $(".div_button a[href='"+newHash+"']").addClass("current");
+                        $("nav a").removeClass("current");
+                        console.log(href);
+                        $('nav a[href$="+href+"]').addClass("current");
                     });
                 });
-        };
+    }
 
+    $(window).bind('popstate', function(){
+       _link = location.pathname.replace(/^.*[\\\/]/, ''); //get filename only
+       loadContent(_link);
     });
 
-    $(window).trigger('hashchange');
+} // otherwise, history is not supported, so nothing fancy here.
+
 
 });
