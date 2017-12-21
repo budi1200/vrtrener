@@ -9,7 +9,7 @@ $(function() {
     $pageWrap.height($pageWrap.height());
     baseHeight = $pageWrap.height() - $mainContent.height();
 
-    $(".div_button").delegate("a", "click", function() {
+    $("nav").delegate("a.side_button", "click", function() {
         window.location.hash = $(this).attr("href");
         return false;
     });
@@ -25,12 +25,13 @@ $(function() {
                     $mainContent.hide().load(newHash + " #guts", function() {
                         $mainContent.fadeIn(500, function() {
                             $pageWrap.animate({
-                                height: baseHeight + $mainContent.height() + "px"
+                                //height: baseHeight + $mainContent.height() + "px"
+                                height: "100%"
                             });
                         });
                         id = 1;
-                        $(".div_button a").removeClass("current");
-                        $(".div_button a[href='"+newHash+"']").addClass("current");
+                        $("nav a").removeClass("current");
+                        $("nav a[href='"+newHash+"']").addClass("current");
                     });
                 });
         };
