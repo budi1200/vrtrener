@@ -127,3 +127,7 @@ body {
 .gumb-domov:hover {
     background-color: dimgray;
 }
+
+.child{
+    text-align: center;
+}
