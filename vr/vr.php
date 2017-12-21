@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <title>VR Raziskovalna</title>
     <meta name="description" content="VR Trener">
-    <script src="../scripts/aframe-v0.7.1.min.js"></script>
-    <script src="../scripts/aframe-event-set-component.js"></script>
+    <script src="../js/aframe-v0.7.1.min.js"></script>
+    <script src="../js/aframe-event-set-component.js"></script>
     <!--<script src="../scripts/set-image.js"></script>-->
     <!--<script src="../scripts/jquery-3.2.1.min.js"></script>-->
-    <script src="../scripts/custom.js"></script>
-    <script src="../scripts/canvas.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/canvas.js"></script>
     <link rel="stylesheet" type="text/css" href="../style.css">
     <link rel="stylesheet" type="text/css" href="vr.css">
 </head>
