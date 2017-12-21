@@ -1,3 +1,10 @@
-h1{
+.quote{
     color: red;
+}
+
+.navodila{
+    width: 100%;
+    height: 100%;
+    transition: all 3s;
+    background-color: rgba(0,0,0,0.4);
 }

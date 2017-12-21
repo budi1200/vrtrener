@@ -25,7 +25,8 @@ $(function() {
                     $mainContent.hide().load(newHash + " #guts", function() {
                         $mainContent.fadeIn(500, function() {
                             $pageWrap.animate({
-                                height: baseHeight + $mainContent.height() + "px"
+                                //height: baseHeight + $mainContent.height() + "px"
+                                height: "100%"
                             });
                         });
                         id = 1;
