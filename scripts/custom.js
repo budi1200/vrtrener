@@ -36,7 +36,7 @@ function setWindow(item_id, vr_id, vaja_id) {
     }else if(!fs){ //Normalno okno
         var test = document.getElementById('okno_vaja');
         nastaviVajo(vaja_id);
-        test.style.opacity = '0.9';
+        test.style.opacity = '0.97';
         test.style.pointerEvents = 'auto';
         vid.play();
     }
