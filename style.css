@@ -60,6 +60,7 @@
     align-items: center;
     position: fixed;
     width: 100%;
+    height: 100%;
     z-index: 2;
 }
 
@@ -73,7 +74,7 @@
 
 #slider .slides {
     display: block;
-    width: 10000px;
+    width: 20000px;
     height: 100%;
     margin: 0px;
     padding: 0px;
@@ -126,4 +127,17 @@ body {
 
 .gumb-domov:hover {
     background-color: dimgray;
+}
+
+.child{
+    text-align: center;
+}
+
+#page-wrap{
+    width: 100%;
+}
+
+#main-content{
+    width: 100%;
+    height: 100%;
 }
