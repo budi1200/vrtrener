@@ -9,7 +9,7 @@ $(function() {
     $pageWrap.height($pageWrap.height());
     baseHeight = $pageWrap.height() - $mainContent.height();
 
-    $("nav").delegate("a", "click", function() {
+    $("nav").delegate("a.side_button", "click", function() {
         window.location.hash = $(this).attr("href");
         return false;
     });
