@@ -5,14 +5,13 @@
     <title>VR Trener</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" type="text/css" href="navodila.css">
-    <!--<link rel="stylesheet" type="text/css" href="animate.css">-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>-->
     <script type="text/javascript" src="js/animate.js"></script>
     <script type="text/javascript" src="js/modernizr.js"></script>
     <script type="text/javascript" src="js/dynamicpage.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
     <meta charset="utf-8">
 </head>
 
@@ -43,25 +42,28 @@
 					        </select>
                         </p>
                     </div>
-
-                    <nav>
-                        <div id="div_button">
-                            <a class="button side_button button_main dynamic" href="navodila.html">Navodila</a>
-                            <a class="button button_main" href="vr/vr.php">Vhod</a>
-                            <a class="button side_button button_main dynamic" href="opis.html">Opis</a>
-                        </div>
-                    </nav>
-
-                    <div class="footer">
-                        <a href="https://www.facebook.com/VR-Trener-526799451008707/"><img src="slike_prva_stran/facebook.png" alt="facebook_icon" width="30" height="30"></a>
-                        <a href="https://twitter.com/"><img src="slike_prva_stran/twitter.png" alt="twitter_icon" width="30" height="30"></a>
-                        <a href="https://www.instagram.com/vrtrener/"><img src="slike_prva_stran/instagram.png" alt="instagram_icon" width="30" height="30"></a>
-                        <a href=""><img src="slike_prva_stran/email.png" alt="email_icon" width="30" height="30"></a>
-                        <a href="https://www.youtube.com/channel/UCkKLyU4n9NgGFFmnDZRKHlw?view_as=subscriber"><img src="slike_prva_stran/youtube.png" alt="youtube_icon" width="30" height="30"></a>
-                    </div>
                 </div>
             </section>
+            <nav>
+                <div id="div_button">
+                    <a onclick="change()" class="button side_button button_main dynamic" href="navodila.html">Navodila</a>
+                    <a class="button button_main" href="vr/vr.php">Vhod</a>
+                    <a onclick="change()" class="button side_button button_main dynamic" href="opis.html">Opis</a>
+                </div>
+            </nav>
         </div>
+        <nav>
+            <a id="gumb_nazaj" onclick="change()" class="button button_main dynamic" href="index.php">Nazaj</a>
+        </nav>
+
+        <div class="footer">
+            <a href="https://www.facebook.com/VR-Trener-526799451008707/"><img src="slike_prva_stran/facebook.png" alt="facebook_icon" width="30" height="30"></a>
+            <a href="https://twitter.com/"><img src="slike_prva_stran/twitter.png" alt="twitter_icon" width="30" height="30"></a>
+            <a href="https://www.instagram.com/vrtrener/"><img src="slike_prva_stran/instagram.png" alt="instagram_icon" width="30" height="30"></a>
+            <a href=""><img src="slike_prva_stran/email.png" alt="email_icon" width="30" height="30"></a>
+            <a href="https://www.youtube.com/channel/UCkKLyU4n9NgGFFmnDZRKHlw?view_as=subscriber"><img src="slike_prva_stran/youtube.png" alt="youtube_icon" width="30" height="30"></a>
+        </div>
+
     </div>
 
     <div class="container">

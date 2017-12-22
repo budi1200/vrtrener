@@ -8,7 +8,7 @@ $(function() {
         baseHeight   = 0,
         $el;
 
-    $pageWrap.height($pageWrap.height());
+    //$pageWrap.height($pageWrap.height());
     baseHeight = $pageWrap.height() - $mainContent.height();
 
     $("nav").delegate("a.dynamic", "click", function() {
@@ -25,7 +25,8 @@ $(function() {
                     $mainContent.hide().load(href + " #guts", function() {
                         $mainContent.fadeIn(200, function() {
                             $pageWrap.animate({
-                                height: "100%"
+                                //height: "90%"
+                                //height: baseHeight + $mainContent.height() + "px"
                             });
                         });
                         $("nav a").removeClass("current");
