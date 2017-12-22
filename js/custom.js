@@ -85,3 +85,19 @@ function nastaviVajo(str) {
   }
   xmlhttp.send();
 }
+
+function change(){
+    var nazaj = $('#gumb_nazaj');
+    var buttons = $('#div_button');
+    var bg = $('.parent');
+
+    if(nazaj.css('display') == 'none'){
+        buttons.css('display', 'none');
+        bg.css('background-color','rgba(0,0,0,0.4)');
+        nazaj.css('display', 'block');
+    }else{
+        nazaj.css('display', 'none');
+        bg.css('background-color','');
+        buttons.css('display', 'block');
+    }
+}
