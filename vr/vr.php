@@ -11,7 +11,7 @@
     <!--<script src="../scripts/jquery-3.2.1.min.js"></script>-->
     <script src="../js/custom.js"></script>
     <script src="../js/canvas.js"></script>
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="vr.css">
 </head>
 
@@ -48,7 +48,7 @@
     <!--VR-->
     <a-scene>
         <!-- 360 Slika -->
-        <a-sky id="img-sky" src="../360/SAM_100_0089.jpg"></a-sky>
+        <a-sky id="img-sky" src="../slike/360_vr/SAM_100_0089.jpg"></a-sky>
 
         <a-plane id="plan" visible="false" src="#canv" height="52" width="60" position="56.823 12.895 27.601" rotation="0 -103 0"></a-plane>
 
