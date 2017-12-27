@@ -12,7 +12,7 @@ document.write(number[element]);
 
 element++;
 
-setInterval(quote_author, 86400000);
+setInterval(quote_author, 2000);
 
 function quote_author(){
 		$("#quote_author").html(number[element]);

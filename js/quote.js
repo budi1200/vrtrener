@@ -6,18 +6,18 @@ var numbers = [
 	"In order to succeed, we must first believe that we can."
 ];
 
-var element = 0;
+var elements = 0;
 
-document.write(numbers[element]);
+document.write(numbers[elements]);
 
-element++;
+elements++;
 
-setInterval(quote, 86400000);
+setInterval(quote, 2000);
 
 function quote(){
-		$("#quote").html(numbers[element]);
-		element++;
-		if(element == numbers.length){
-			element = 0;
+		$("#quote").html(numbers[elements]);
+		elements++;
+		if(elements == numbers.length){
+			elements = 0;
 		}
 }
