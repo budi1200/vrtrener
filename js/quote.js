@@ -12,7 +12,7 @@ document.write(numbers[element]);
 
 element++;
 
-setInterval(quote, 2000);
+setInterval(quote, 86400000);
 
 function quote(){
 		$("#quote").html(numbers[element]);
