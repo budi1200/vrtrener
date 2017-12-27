@@ -15,8 +15,8 @@ element++;
 setInterval(quote, 2000);
 
 function quote(){
-		document.open();
-		document.write(numbers[element]);
+		//document.open();
+		$("#quote").html(numbers[element]);
 		element++;
 		if(element == numbers.length){
 			element = 0;
