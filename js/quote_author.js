@@ -15,7 +15,6 @@ element++;
 setInterval(quote_author, 2000);
 
 function quote_author(){
-		//document.open();
 		$("#quote_author").html(numbers[element]);
 		element++;
 		if(element == numbers.length){
