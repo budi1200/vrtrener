@@ -36,7 +36,7 @@
                         <p id="quote_author"><script src="js/quote.js"></script></p>
 =======
                         <p id="quote_author">
-                            <script src="js/quote_author.js"></script>
+                            <script src="js/quote.js"></script>
                         </p>
 >>>>>>> origin/master
                     </div>
