@@ -30,7 +30,7 @@
                     </div>
 
                     <div class="child text">
-                        <p id="quote_author"><script src="js/quote_author.js"></script></p>
+                        <p id="quote_author"><script src="js/quote.js"></script></p>
                     </div>
 
                     <div class="child">
