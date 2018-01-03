@@ -26,11 +26,19 @@
                     </div>
 
                     <div class="child text">
-                        <blockquote id="quote"><script src="js/quote.js"></script></blockquote>
+                        <blockquote id="quote">
+                            <script src="js/quote.js"></script>
+                        </blockquote>
                     </div>
 
                     <div class="child text">
+<<<<<<< HEAD
                         <p id="quote_author"><script src="js/quote.js"></script></p>
+=======
+                        <p id="quote_author">
+                            <script src="js/quote_author.js"></script>
+                        </p>
+>>>>>>> origin/master
                     </div>
 
                     <div class="child">
