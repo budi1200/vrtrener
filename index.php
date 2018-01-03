@@ -32,13 +32,9 @@
                     </div>
 
                     <div class="child text">
-<<<<<<< HEAD
-                        <p id="quote_author"><script src="js/quote.js"></script></p>
-=======
                         <p id="quote_author">
                             <script src="js/quote.js"></script>
                         </p>
->>>>>>> origin/master
                     </div>
 
                     <div class="child">
