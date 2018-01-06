@@ -5,19 +5,33 @@ var numbers = [
 	"Always do your best. What you plant now, you will harvest later.",
 	"In order to succeed, we must first believe that we can."
 ];
+var number = [
+	"Jim Rohn",
+	"Pastor Maldonado",
+	"Gene Tunney",
+	"Og Mandino",
+	"Nikos Kazantzakis"
+];
 
-var elements = 0;
+var element = Math.floor(Math.random () * numbers.length);
+$("#quote").html(numbers[element]);
+    switch(element){
+        case 0:
+            $("#quote_author").html(number[element]);
+            break;
+        case 1:
+            $("#quote_author").html(number[element]);
+            break;
+        case 2:
+            $("#quote_author").html(number[element]);
+            break;
+        case 3:
+            $("#quote_author").html(number[element]);
+            break;
+        case 4:
+            $("#quote_author").html(number[element]);
+            break;
+        default:
+            break;
+    }
 
-document.write(numbers[elements]);
-
-elements++;
-
-setInterval(quote, 2000);
-
-function quote(){
-		$("#quote").html(numbers[elements]);
-		elements++;
-		if(elements == numbers.length){
-			elements = 0;
-		}
-}
