@@ -143,3 +143,12 @@ body {
 #quote{
     z-index: -2;
 }
+.fitnes_gumb{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    background-color:rgba(0,255,0,0.1);
+    font-size: 14px;
+    width: auto;
+    padding: 10px;
+}

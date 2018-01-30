@@ -39,7 +39,7 @@
 
                     <div class="child">
                         <p id="tipka_fitnes">Fitnes:
-                            <select name="izberi" size="1">
+                            <select class="fitnes_gumb" name="izberi" size="1">
 						      <option value="velenje" selected="selected">Velenje</option>
 						      <option value="slovenj_gradec">Slovenj Gradec</option>
 						      <option value="ravne_na_koroškem">Ravne na Koroškem</option>
