@@ -49,9 +49,9 @@ function off(el_id) {
     a.style.opacity = '0';
     a.style.pointerEvents = 'none';
 
-    document.getElementById("naslov").innerHTML = "";
-    document.getElementById("opis").innerHTML = "";
-    document.getElementById("url").src="";
+	$('#naslov').html = "";
+	$('#opis').html = "";
+	$('#url').html = "";
     vid.load();
 }
 
@@ -72,9 +72,12 @@ function nastaviVajo(str) {
         parser = new DOMParser();
         xmlDoc = parser.parseFromString(this.responseText,"text/xml");
 
+		//$('#naslov').html = xmlDoc.getElementById('ime').innerHTML;
+		//$('#opis').html = xmlDoc.getElementById('opis').innerHTML;
+		$('#url').attr("src", xmlDoc.getElementById('url').innerHTML);
         document.getElementById("naslov").innerHTML = xmlDoc.getElementById('ime').innerHTML;
         document.getElementById("opis").innerHTML = xmlDoc.getElementById('opis').innerHTML;
-        document.getElementById("url").src = (xmlDoc.getElementById('url').innerHTML);
+        //document.getElementById("url").src = (xmlDoc.getElementById('url').innerHTML);
         vid.load();
     }
   }

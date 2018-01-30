@@ -7,8 +7,7 @@
     <meta name="description" content="VR Trener">
     <script src="../js/aframe-v0.7.1.min.js"></script>
     <script src="../js/aframe-event-set-component.js"></script>
-    <!--<script src="../scripts/set-image.js"></script>-->
-    <!--<script src="../scripts/jquery-3.2.1.min.js"></script>-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="../js/custom.js"></script>
     <script src="../js/canvas.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
