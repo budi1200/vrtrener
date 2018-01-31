@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
-
+<?php
+    include('../connect.php');
+?>
 <head>
     <meta charset="utf-8">
     <title>VR Raziskovalna</title>
@@ -48,17 +50,17 @@
     <a-scene>
         <!-- 360 Slika -->
         <a-sky id="img-sky" src="../slike/360_vr/SAM_100_0089.jpg"></a-sky>
+		
+		<a-entity position="-13.23 5.614 -14.944" geometry="height:5;width:5"></a-entity>
 
+		<?php
+        $query="SELECT * FROM tocke";
+        $result = pg_query($conn,$query);
+         while($row = pg_fetch_array($result)){
+             echo '<a-entity id="' . $row['ime'] . '" onclick=\'setWindow(' . $row['ukaz'] . ')\' geometry="primitive: sphere" material="color: blue" position="' . $row['position'] . '" radius="1.25"></a-entity>';
+         }
+    	?>
         <a-plane id="plan" visible="false" src="#canv" height="52" width="60" position="56.823 12.895 27.601" rotation="0 -103 0"></a-plane>
-
-        <a-entity id="sphere" onclick="setWindow('sphere', 'plan', '1')" geometry="primitive: sphere" material="color: blue" position="33.154 15.231 3.313" radius="1.25">
-        </a-entity>
-
-        <a-entity id="sphere2" onclick="setWindow('sphere2', 'plan', '2')" geometry="primitive: sphere" material="color: blue" position="33.154 15.231 -11.313" radius="1.25">
-        </a-entity>
-
-        <a-entity id="sphere3" onclick="setWindow('sphere3', 'plan', '3')" geometry="primitive: sphere" material="color: blue" position="30.154 15.231 -14.313" radius="1.25">
-        </a-entity>
 
         <!-- Kamera + cursor -->
         <a-entity camera look-controls>
