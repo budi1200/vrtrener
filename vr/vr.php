@@ -30,7 +30,7 @@
             <!-- Video in besedilo vaje -->
             <div class="box_body">
                 <div class="video">
-                    <video id="vid" width="300" height="400" poster="loading.png" autoplay muted loop>
+                    <video id="vid" width="300" height="400" poster="wait.svg" autoplay muted loop>
                         <source id="url" src="" type="video/mp4">
 				    </video>
                 </div>
