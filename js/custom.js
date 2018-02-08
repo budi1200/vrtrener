@@ -20,6 +20,7 @@ function setWindow(vaja_id) {
 
     if(fs){ //VR Nacin
         if(!open){
+            vid.pause();
             nastaviVajo(vaja);
                 console.log("waiting");
                 canv();
@@ -36,7 +37,7 @@ function setWindow(vaja_id) {
         nastaviVajo(vaja);
         $("#okno_vaja").css("opacity", "0.97");
         $("#okno_vaja").css("pointerEvents", "auto");
-        vid.play();
+        //vid.play();
     }
 }
 
