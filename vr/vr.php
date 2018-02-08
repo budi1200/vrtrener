@@ -61,7 +61,7 @@
              echo '<a-entity id="vaja_' . $v . '" onclick=\'setWindow(vaja_' . $v . ')\' geometry="primitive: sphere" material="color: blue" position="' . $row['posX'] . " " . $row['posY'] . " " . $row['posZ'] . '" radius="1.25"></a-entity>';
          }
     	?>
-        <a-plane id="plan" visible="false" src="#canv" height="52" width="60" position="56.823 12.895 27.601" rotation="0 -103 0"></a-plane>
+        <a-plane id="plan" visible="false" src="#canv" height="52" width="60" position="56.823 12.895 27.601" rotation="0 -96 0"></a-plane>
 
         <!-- Kamera + cursor -->
         <a-entity camera look-controls>

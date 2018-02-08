@@ -1,5 +1,7 @@
 var fs = false; // VR nacin
 var open = false; // Stanje okna v vr nacinu
+var posZ = 0;
+var offset = 0;
 
 // Preverjanje ce je uporabnik v VR nacinu
 function checkVR(){
@@ -25,6 +27,9 @@ function setWindow(vaja_id) {
                 console.log("waiting");
                 canv();
                 vid.load();
+                pos = posZ + offset;
+                console.log(pos);
+                vr_id.setAttribute("position", "56.823 12.895 " + pos);
                 vr_id.setAttribute("visible", true);
                 vaja_id.setAttribute("material", "color: red");
                 open = true;
@@ -71,6 +76,9 @@ function nastaviVajo(str) {
         parser = new DOMParser();
         xmlDoc = parser.parseFromString(this.responseText,"text/xml");
 
+        posZ = parseInt(xmlDoc.getElementById("posZ").innerHTML);
+        offset = parseInt(xmlDoc.getElementById("offset").innerHTML);
+        console.log(offset);
         document.getElementById("naslov").innerHTML = xmlDoc.getElementById('ime').innerHTML;
         document.getElementById("opis").innerHTML = xmlDoc.getElementById('opis').innerHTML;
         $('#url').attr("src", xmlDoc.getElementById('url').innerHTML);
