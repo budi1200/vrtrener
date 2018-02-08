@@ -57,7 +57,8 @@
         $query="SELECT * FROM tocke";
         $result = pg_query($conn,$query);
          while($row = pg_fetch_array($result)){
-             echo '<a-entity id="' . $row['ime'] . '" onclick=\'setWindow(' . $row['ukaz'] . ')\' geometry="primitive: sphere" material="color: blue" position="' . $row['position'] . '" radius="1.25"></a-entity>';
+             $v = $row['vaja_id'];
+             echo '<a-entity id="vaja_' . $v . '" onclick=\'setWindow(vaja_' . $v . ')\' geometry="primitive: sphere" material="color: blue" position="' . $row['posX'] . " " . $row['posY'] . " " . $row['posZ'] . '" radius="1.25"></a-entity>';
          }
     	?>
         <a-plane id="plan" visible="false" src="#canv" height="52" width="60" position="56.823 12.895 27.601" rotation="0 -103 0"></a-plane>

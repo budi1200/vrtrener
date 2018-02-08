@@ -8,10 +8,11 @@ if(!$conn){
     $error = error_get_last();
     echo "Connection failed. Error was: ". $error['message']. "\n";
 } else {
-    echo "Connection succesful.\n";
+    //echo "Connection succesful.\n";
 }
 
-    $st = intval($_GET['q']);
+    $st = ($_GET['q']);
+    $st = substr($st, 5);
     $q = "SELECT * FROM vaje WHERE id=$st";
     $result = pg_query($conn, $q);
     while ($row = pg_fetch_assoc($result)) {
