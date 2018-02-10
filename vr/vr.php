@@ -45,16 +45,27 @@
 
     <!-- Gumb domov za vecje zaslone-->
     <div id="domov"><a class="button gumb-domov" href="../index.php">Domov</a></div>
-
     <!--VR-->
     <a-scene>
         <!-- 360 Slika -->
-        <a-sky id="img-sky" src="../slike/360_vr/SAM_100_0089.jpg"></a-sky>
-		
-		<a-entity position="-13.23 5.614 -14.944" geometry="height:5;width:5"></a-entity>
+        <?php
+        if(isset($_GET['s'])){
+            $slikaSt = ($_GET['s']);
+        }else{
+            $slikaSt = 89;
+        }
+        ?>
+        <a-sky id="img-sky" src=""></a-sky>
 
-		<?php
-        $query="SELECT * FROM tocke";
+        <script>
+            var sky = <?php echo $slikaSt; ?>;
+            $("#img-sky").attr("src", "../slike/360_vr/SAM_100_00" + sky + ".jpg");
+        </script>
+		
+		<a-entity onclick="window.location.href='vr.php?s=88'" position="-13.23 5.614 -14.944" geometry="height:5;width:5"></a-entity>
+
+        <?php
+        $query="SELECT * FROM tocke WHERE slika=$slikaSt";
         $result = pg_query($conn,$query);
          while($row = pg_fetch_array($result)){
              $v = $row['vaja_id'];
@@ -65,7 +76,13 @@
 
         <!-- Kamera + cursor -->
         <a-entity camera look-controls>
-            <a-entity cursor="fuse: true; fuseTimeout: 500;" position="0 0 -5" geometry="primitive: ring; radiusInner: 0.04; radiusOuter: 0.06" material="color: black; shader: flat" event-set__1="_event: mouseenter; color: springgreen" event-set__2="_event: mouseleave; color: black">
+            <a-entity 
+                cursor="fuse: true; fuseTimeout: 500;" 
+                position="0 0 -5" 
+                geometry="primitive: ring; radiusInner: 0.04; radiusOuter: 0.06" 
+                material="color: black; shader: flat" 
+                event-set__1="_event: mouseenter; color: springgreen" 
+                event-set__2="_event: mouseleave; color: black">
             </a-entity>
         </a-entity>
     </a-scene>
