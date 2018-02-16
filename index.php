@@ -2,12 +2,11 @@
 <html>
 
 <head>
-    <title>VR Trener</title>
+    <title>VR Fitnes Trener</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/opis_navodila.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!--<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>-->
     <script type="text/javascript" src="js/animate.js"></script>
     <script type="text/javascript" src="js/modernizr.js"></script>
     <script type="text/javascript" src="js/dynamicpage.js"></script>
@@ -27,13 +26,13 @@
 
                     <div class="child text">
                         <blockquote id="quote">
-                            <script src="js/quote.js"></script>
+                        Take care of your body. It's the only place you have to live.
                         </blockquote>
                     </div>
 
                     <div class="child text">
                         <p id="quote_author">
-                            <script src="js/quote.js"></script>
+                        Jim Rohn
                         </p>
                     </div>
 
@@ -83,6 +82,7 @@
             </ul>
         </div>
     </div>
+    <script src="js/quote.js"></script>
 </body>
 
 </html>
