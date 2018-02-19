@@ -11,6 +11,7 @@
     <script src="../js/aframe-event-set-component.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="../js/custom.js"></script>
+    <script src="../js/canvid.js"></script>
     <script src="../js/canvas.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="vr.css">
@@ -31,7 +32,7 @@
             <div class="box_body">
                 <div class="video">
                     <video id="vid" width="300" height="400" poster="wait.svg" autoplay muted loop>
-                        <source id="url" src="" type="image/avi">
+                        <source id="url" src="" type="video/avi">
 				    </video>
                 </div>
                 <div class="opis">

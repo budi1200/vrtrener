@@ -18,6 +18,24 @@ canv.font = "bold 16px Arial";
 canv.fillText(naslov, 10, 26);
 canv.font = "14px Arial";
 
+
+var canvidControl = canvid({
+    selector : '#canv',
+    videos: {
+        clip1: { src: '../vr/myvideo.jpg', frames: 38, cols: 6, loops: 1, onEnd: function(){
+          console.log('clip1 ended.');
+          //canvidControl.play('clip1');
+        }},
+    },
+    width: 500,
+    height: 400,
+    loaded: function() {
+        canvidControl.play('clip1');
+        // reverse playback
+        // canvidControl.play('clip1', true);
+    }
+});
+
 function wrapText(canv, text, x, y, maxWidth, lineHeight) {
     var words = text.split(' ');
     var line = '';
