@@ -3,6 +3,13 @@ var open = false; // Stanje okna v vr nacinu
 var posZ = 0;
 var offset = 0;
 
+window.addEventListener("load",function() {
+    setTimeout(function(){
+        // This hides the address bar:
+        window.scrollTo(0, 1);
+    }, 0);
+});
+
 // Preverjanje ce je uporabnik v VR nacinu
 function checkVR(){
     document.querySelector('a-scene').addEventListener('enter-vr', function () {
