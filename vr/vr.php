@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html>
-
+<?php
+    include('../connect.php');
+?>
 <head>
     <meta charset="utf-8">
     <title>VR Raziskovalna</title>
     <meta name="description" content="VR Trener">
     <script src="../js/aframe-v0.7.1.min.js"></script>
     <script src="../js/aframe-event-set-component.js"></script>
-    <!--<script src="../scripts/set-image.js"></script>-->
-    <!--<script src="../scripts/jquery-3.2.1.min.js"></script>-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="../js/custom.js"></script>
     <script src="../js/canvas.js"></script>
-    <link rel="stylesheet" type="text/css" href="../style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="vr.css">
 </head>
 
@@ -29,7 +30,7 @@
             <!-- Video in besedilo vaje -->
             <div class="box_body">
                 <div class="video">
-                    <video id="vid" width="300" height="400" poster="loading.png" autoplay muted loop>
+                    <video id="vid" width="300" height="400" poster="wait.svg" autoplay muted loop>
                         <source id="url" src="" type="video/mp4">
 				    </video>
                 </div>
@@ -44,26 +45,44 @@
 
     <!-- Gumb domov za vecje zaslone-->
     <div id="domov"><a class="button gumb-domov" href="../index.php">Domov</a></div>
-
     <!--VR-->
     <a-scene>
         <!-- 360 Slika -->
-        <a-sky id="img-sky" src="../360/SAM_100_0089.jpg"></a-sky>
+        <?php
+        if(isset($_GET['s'])){
+            $slikaSt = ($_GET['s']);
+        }else{
+            $slikaSt = 89;
+        }
+        ?>
+        <a-sky id="img-sky" src=""></a-sky>
 
-        <a-plane id="plan" visible="false" src="#canv" height="52" width="60" position="56.823 12.895 27.601" rotation="0 -103 0"></a-plane>
+        <script>
+            var sky = <?php echo $slikaSt; ?>;
+            $("#img-sky").attr("src", "../slike/360_vr/SAM_100_00" + sky + ".jpg");
+        </script>
+		
+		<a-entity onclick="window.location.href='vr.php?s=88'" position="-13.23 5.614 -14.944" geometry="height:5;width:5"></a-entity>
 
-        <a-entity id="sphere" onclick="setWindow('sphere', 'plan', '1')" geometry="primitive: sphere" material="color: blue" position="33.154 15.231 3.313" radius="1.25">
-        </a-entity>
-
-        <a-entity id="sphere2" onclick="setWindow('sphere2', 'plan', '2')" geometry="primitive: sphere" material="color: blue" position="33.154 15.231 -11.313" radius="1.25">
-        </a-entity>
-
-        <a-entity id="sphere3" onclick="setWindow('sphere3', 'plan', '3')" geometry="primitive: sphere" material="color: blue" position="30.154 15.231 -14.313" radius="1.25">
-        </a-entity>
+        <?php
+        $query="SELECT * FROM tocke WHERE slika=$slikaSt";
+        $result = pg_query($conn,$query);
+         while($row = pg_fetch_array($result)){
+             $v = $row['vaja_id'];
+             echo '<a-entity id="vaja_' . $v . '" onclick=\'setWindow(vaja_' . $v . ')\' geometry="primitive: sphere" material="color: blue" position="' . $row['posX'] . " " . $row['posY'] . " " . $row['posZ'] . '" radius="1.25"></a-entity>';
+         }
+    	?>
+        <a-plane id="plan" visible="false" src="#canv" height="52" width="60" position="56.823 12.895 27.601" rotation="0 -96 0"></a-plane>
 
         <!-- Kamera + cursor -->
         <a-entity camera look-controls>
-            <a-entity cursor="fuse: true; fuseTimeout: 500;" position="0 0 -5" geometry="primitive: ring; radiusInner: 0.04; radiusOuter: 0.06" material="color: black; shader: flat" event-set__1="_event: mouseenter; color: springgreen" event-set__2="_event: mouseleave; color: black">
+            <a-entity 
+                cursor="fuse: true; fuseTimeout: 500;" 
+                position="0 0 -5" 
+                geometry="primitive: ring; radiusInner: 0.04; radiusOuter: 0.06" 
+                material="color: black; shader: flat" 
+                event-set__1="_event: mouseenter; color: springgreen" 
+                event-set__2="_event: mouseleave; color: black">
             </a-entity>
         </a-entity>
     </a-scene>

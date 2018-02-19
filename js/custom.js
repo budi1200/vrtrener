@@ -1,5 +1,7 @@
 var fs = false; // VR nacin
 var open = false; // Stanje okna v vr nacinu
+var posZ = 0;
+var offset = 0;
 
 // Preverjanje ce je uporabnik v VR nacinu
 function checkVR(){
@@ -12,33 +14,35 @@ function checkVR(){
         fs = false;
     });
 }
-
 // Prikaz okna za vajo
-function setWindow(item_id, vr_id, vaja_id) {
+function setWindow(vaja_id) {
+    var vr_id = plan;
+    var vaja = $(vaja_id).attr("id");
     var vid = document.getElementById("vid");
-    var el = document.querySelector('#' + vr_id);
-    var il = document.querySelector('#' + item_id);
 
     if(fs){ //VR Nacin
         if(!open){
-            nastaviVajo(vaja_id);
+            vid.pause();
+            nastaviVajo(vaja);
                 console.log("waiting");
                 canv();
                 vid.load();
-                el.setAttribute("visible", true);
-                il.setAttribute("material", "color: red");
+                pos = posZ + offset;
+                console.log(pos);
+                vr_id.setAttribute("position", "56.823 12.895 " + pos);
+                vr_id.setAttribute("visible", true);
+                vaja_id.setAttribute("material", "color: red");
                 open = true;
         }else if(open){ // Zapri okno v vr nacinu ce je odprto
-            el.setAttribute("visible", false);
-            il.setAttribute("material", "color: blue");
+            vr_id.setAttribute("visible", false);
+            vaja_id.setAttribute("material", "color: blue");
             open = false;
         }
     }else if(!fs){ //Normalno okno
-        var test = document.getElementById('okno_vaja');
-        nastaviVajo(vaja_id);
-        test.style.opacity = '0.97';
-        test.style.pointerEvents = 'auto';
-        vid.play();
+        nastaviVajo(vaja);
+        $("#okno_vaja").css("opacity", "0.97");
+        $("#okno_vaja").css("pointerEvents", "auto");
+        //vid.play();
     }
 }
 
@@ -49,9 +53,9 @@ function off(el_id) {
     a.style.opacity = '0';
     a.style.pointerEvents = 'none';
 
-    document.getElementById("naslov").innerHTML = "";
-    document.getElementById("opis").innerHTML = "";
-    document.getElementById("url").src="";
+	$('#naslov').html = "";
+	$('#opis').html = "";
+	$('#url').html = "";
     vid.load();
 }
 
@@ -72,9 +76,12 @@ function nastaviVajo(str) {
         parser = new DOMParser();
         xmlDoc = parser.parseFromString(this.responseText,"text/xml");
 
+        posZ = parseInt(xmlDoc.getElementById("posZ").innerHTML);
+        offset = parseInt(xmlDoc.getElementById("offset").innerHTML);
+        console.log(offset);
         document.getElementById("naslov").innerHTML = xmlDoc.getElementById('ime').innerHTML;
         document.getElementById("opis").innerHTML = xmlDoc.getElementById('opis').innerHTML;
-        document.getElementById("url").src = (xmlDoc.getElementById('url').innerHTML);
+        $('#url').attr("src", xmlDoc.getElementById('url').innerHTML);
         vid.load();
     }
   }
