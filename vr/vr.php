@@ -32,7 +32,7 @@
             <div class="box_body">
                 <div class="video">
                     <video id="vid" width="300" height="400" poster="wait.svg" autoplay muted loop>
-                        <source id="url" src="" type="video/avi">
+                        <source id="url" src="" type="video/mp4">
 				    </video>
                 </div>
                 <div class="opis">
