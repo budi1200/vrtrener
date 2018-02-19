@@ -26,8 +26,6 @@ function setWindow(vaja_id) {
             nastaviVajo(vaja);
                 console.log("waiting");
                 canv();
-                //$(".canvid").attr('id', 'canvid');
-                //modif();
                 vid.load();
                 pos = posZ + offset;
                 console.log(pos);
@@ -84,6 +82,8 @@ function nastaviVajo(str) {
         document.getElementById("naslov").innerHTML = xmlDoc.getElementById('ime').innerHTML;
         document.getElementById("opis").innerHTML = xmlDoc.getElementById('opis').innerHTML;
         $('#url').attr("src", xmlDoc.getElementById('url').innerHTML);
+        $('#vid').attr("url_slika", xmlDoc.getElementById('url_slika').innerHTML);
+        $('#vid').attr("frames_slika", xmlDoc.getElementById('frames_slika').innerHTML);
         vid.load();
     }
   }

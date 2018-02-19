@@ -26,6 +26,8 @@ if(isset($_GET['q'])){
         echo "<span id='ime'>" . $row['ime'] . "</span><br/>";
         echo "<span id='opis'>" . $row['opis'] . "</span><br/>";
         echo "<span id='url'>" . $row['url'] . "</span><br/>";
+        echo "<span id='url_slika'>" . $row['url_slika'] . "</span><br/>";
+        echo "<span id='frames_slika'>" . $row['frames_slika'] . "</span><br/>";
     }
 }else{
     echo "String not found";

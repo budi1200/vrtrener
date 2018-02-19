@@ -15,7 +15,8 @@ canv.fillStyle = "#000";
 canv.font = "bold 16px Arial";
 canv.fillText(naslov, 10, 26);
 canv.font = "14px Arial";*/
-
+var video = $('#vid').attr('url_slika');
+var frame = $('#vid').attr('frames_slika');
 /*video.addEventListener('play', function () {
     var $this = this; //cache
     (function loop() {
@@ -29,7 +30,7 @@ canv.font = "14px Arial";*/
 var canvidControl = canvid({
     selector : '#canvWrapper',
     videos: {
-        clip1: { src: '../vr/myvideo.jpg', frames: 7, cols: 6, fps: 6, loops: 1, onEnd: function(){
+        clip1: { src: video, frames: frame, cols: 6, fps: 6, loops: 1, onEnd: function(){
           console.log('clip1 ended.');
           canvidControl.play('clip1');
         }},
@@ -41,7 +42,6 @@ var canvidControl = canvid({
         $('.canvid').attr('id', 'canvid');
         var can = document.getElementById("canvid");
         var canv = can.getContext("2d");
-        //var video = document.getElementById('vid');
         var opis = document.getElementById("opis").innerHTML;
         var naslov = document.getElementById("naslov").innerHTML;
         var text_x = 326;
