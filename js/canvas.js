@@ -1,7 +1,5 @@
 function canv(){
-var canvas = document.getElementById("canv");
-var canv = canvas.getContext("2d");
-var video = document.getElementById('vid');
+/*var video = document.getElementById('vid');
     //console.log(video);
 var opis = document.getElementById("opis").innerHTML;
     //console.log(opis);
@@ -16,26 +14,7 @@ canv.fillRect(0, 0, 500, 500);
 canv.fillStyle = "#000";
 canv.font = "bold 16px Arial";
 canv.fillText(naslov, 10, 26);
-canv.font = "14px Arial";
-
-function wrapText(canv, text, x, y, maxWidth, lineHeight) {
-    var words = text.split(' ');
-    var line = '';
-
-    for (var n = 0; n < words.length; n++) {
-        var testLine = line + words[n] + ' ';
-        var metrics = canv.measureText(testLine);
-        var testWidth = metrics.width;
-        if (testWidth > maxWidth && n > 0) {
-            canv.fillText(line, x, y);
-            line = words[n] + ' ';
-            y += lineHeight;
-        } else {
-            line = testLine;
-        }
-    }
-    canv.fillText(line, x, y);
-}
+canv.font = "14px Arial";*/
 
 /*video.addEventListener('play', function () {
     var $this = this; //cache
@@ -50,7 +29,7 @@ function wrapText(canv, text, x, y, maxWidth, lineHeight) {
 var canvidControl = canvid({
     selector : '#canvWrapper',
     videos: {
-        clip1: { src: '../vr/myvideo.jpg', frames: 7, cols: 6, loops: 1, onEnd: function(){
+        clip1: { src: '../vr/myvideo.jpg', frames: 7, cols: 6, fps: 6, loops: 1, onEnd: function(){
           console.log('clip1 ended.');
           canvidControl.play('clip1');
         }},
@@ -61,27 +40,46 @@ var canvidControl = canvid({
         canvidControl.play('clip1');
         $('.canvid').attr('id', 'canvid');
         var can = document.getElementById("canvid");
-        var canv2 = can.getContext("2d");
-        canv2.canvas.width = 500;
-        canv2.canvas.height = 500;
-        canv2.fillStyle = "#CCC";
-        canv2.fillRect(0, 0, 500, 500);
+        var canv = can.getContext("2d");
+        //var video = document.getElementById('vid');
+        var opis = document.getElementById("opis").innerHTML;
+        var naslov = document.getElementById("naslov").innerHTML;
+        var text_x = 326;
+        var text_y = 61;
+        var text_maxWidth = 164;
+        var lineHeight = 17;
+        canv.canvas.width = 500;
+        canv.canvas.height = 500;
+        canv.fillStyle = "#CCC";
+        canv.fillRect(0, 0, 500, 500);
+        canv.fillStyle = "#000";
+        canv.font = "bold 16px Arial";
+        canv.fillText(naslov, 25, 458);
+        canv.font = "14px Arial";
+
+        function wrapText(canv, text, x, y, maxWidth, lineHeight) {
+            var words = text.split(' ');
+            var line = '';
+        
+            for (var n = 0; n < words.length; n++) {
+                var testLine = line + words[n] + ' ';
+                var metrics = canv.measureText(testLine);
+                var testWidth = metrics.width;
+                if (testWidth > maxWidth && n > 0) {
+                    canv.fillText(line, x, y);
+                    line = words[n] + ' ';
+                    y += lineHeight;
+                } else {
+                    line = testLine;
+                }
+            }
+            canv.fillText(line, x, y);
+        }
+
+        wrapText(canv, opis, text_x, text_y, text_maxWidth, lineHeight);
+
         $("#plan").attr('src', '#canvid');
-        // reverse playback
-        // canvidControl.play('clip1', true);
     }
 });
 
-wrapText(canv, opis, text_x, text_y, text_maxWidth, lineHeight);
-}
-
-function modif(){
-    //canvidControl.play('clip1');
-    //$('.canvid').attr('id', 'canvid');
-    var can = document.getElementById("canvid");
-    var canv2 = can.getContext("2d");
-    canv2.canvas.width = 500;
-    canv2.canvas.height = 500;
-    canv2.fillStyle = "#CCC";
-    canv2.fillRect(0, 0, 500, 500);
 }

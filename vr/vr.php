@@ -43,7 +43,6 @@
         </div>
     </div>
     <div id="canvWrapper">
-    <canvas id="canv" width="500" height="500"></canvas>
     </div>
     <!-- Gumb domov za vecje zaslone-->
     <div id="domov"><a class="button gumb-domov" href="../index.php">Domov</a></div>
