@@ -18,24 +18,6 @@ canv.font = "bold 16px Arial";
 canv.fillText(naslov, 10, 26);
 canv.font = "14px Arial";
 
-
-var canvidControl = canvid({
-    selector : '#canv',
-    videos: {
-        clip1: { src: '../vr/myvideo.jpg', frames: 38, cols: 6, loops: 1, onEnd: function(){
-          console.log('clip1 ended.');
-          //canvidControl.play('clip1');
-        }},
-    },
-    width: 500,
-    height: 400,
-    loaded: function() {
-        canvidControl.play('clip1');
-        // reverse playback
-        // canvidControl.play('clip1', true);
-    }
-});
-
 function wrapText(canv, text, x, y, maxWidth, lineHeight) {
     var words = text.split(' ');
     var line = '';
@@ -55,7 +37,7 @@ function wrapText(canv, text, x, y, maxWidth, lineHeight) {
     canv.fillText(line, x, y);
 }
 
-video.addEventListener('play', function () {
+/*video.addEventListener('play', function () {
     var $this = this; //cache
     (function loop() {
         if (!$this.paused && !$this.ended) {
@@ -63,7 +45,43 @@ video.addEventListener('play', function () {
             setTimeout(loop, 1000 / 30); // drawing at 30fps
         }
     })();
-}, 0);
+}, 0);*/
+
+var canvidControl = canvid({
+    selector : '#canvWrapper',
+    videos: {
+        clip1: { src: '../vr/myvideo.jpg', frames: 7, cols: 6, loops: 1, onEnd: function(){
+          console.log('clip1 ended.');
+          canvidControl.play('clip1');
+        }},
+    },
+    width: 300,
+    height: 400,
+    loaded: function() {
+        canvidControl.play('clip1');
+        $('.canvid').attr('id', 'canvid');
+        var can = document.getElementById("canvid");
+        var canv2 = can.getContext("2d");
+        canv2.canvas.width = 500;
+        canv2.canvas.height = 500;
+        canv2.fillStyle = "#CCC";
+        canv2.fillRect(0, 0, 500, 500);
+        $("#plan").attr('src', '#canvid');
+        // reverse playback
+        // canvidControl.play('clip1', true);
+    }
+});
 
 wrapText(canv, opis, text_x, text_y, text_maxWidth, lineHeight);
+}
+
+function modif(){
+    //canvidControl.play('clip1');
+    //$('.canvid').attr('id', 'canvid');
+    var can = document.getElementById("canvid");
+    var canv2 = can.getContext("2d");
+    canv2.canvas.width = 500;
+    canv2.canvas.height = 500;
+    canv2.fillStyle = "#CCC";
+    canv2.fillRect(0, 0, 500, 500);
 }

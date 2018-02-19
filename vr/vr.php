@@ -9,10 +9,11 @@
     <meta name="description" content="VR Trener">
     <script src="../js/aframe-v0.7.1.min.js"></script>
     <script src="../js/aframe-event-set-component.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="../js/custom.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>-->
+    <script src="../js/jquery-3.3.1.js"></script>
     <script src="../js/canvid.js"></script>
     <script src="../js/canvas.js"></script>
+    <script src="../js/custom.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="vr.css">
 </head>
@@ -41,9 +42,9 @@
             </div>
         </div>
     </div>
-
+    <div id="canvWrapper">
     <canvas id="canv" width="500" height="500"></canvas>
-
+    </div>
     <!-- Gumb domov za vecje zaslone-->
     <div id="domov"><a class="button gumb-domov" href="../index.php">Domov</a></div>
     <!--VR-->
@@ -73,7 +74,7 @@
              echo '<a-entity id="vaja_' . $v . '" onclick=\'setWindow(vaja_' . $v . ')\' geometry="primitive: sphere" material="color: blue" position="' . $row['posX'] . " " . $row['posY'] . " " . $row['posZ'] . '" radius="1.25"></a-entity>';
          }
     	?>
-        <a-plane id="plan" visible="false" src="#canv" height="52" width="60" position="56.823 12.895 27.601" rotation="0 -96 0"></a-plane>
+        <a-plane id="plan" visible="false" height="52" width="60" position="56.823 12.895 27.601" rotation="0 -96 0"></a-plane>
 
         <!-- Kamera + cursor -->
         <a-entity camera look-controls>

@@ -26,6 +26,8 @@ function setWindow(vaja_id) {
             nastaviVajo(vaja);
                 console.log("waiting");
                 canv();
+                //$(".canvid").attr('id', 'canvid');
+                //modif();
                 vid.load();
                 pos = posZ + offset;
                 console.log(pos);
