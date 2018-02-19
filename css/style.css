@@ -156,3 +156,45 @@ body {
     border: 2px solid greenyellow;
     text-align: center;
 }
+
+@media only screen and (min-width: 500px) {
+    
+    body{
+        font-size: 2em;
+    }
+
+    #navodila{
+        max-width: 95% !important;
+    }
+
+    .button{
+        display: inline;
+        font-size: 2em !important;
+    }
+
+    #quote{
+        font-size: 1.5em;
+    }
+
+    #quote_author{
+        font-size: 1.5em;
+    }
+
+    #tipka_fitnes{
+        font-size: 2em;
+    }
+
+    .fitnes_gumb{
+        font-size: 0.8em;
+    }
+
+    .child img{
+        width: 350px;
+        height: 350px;
+    }
+
+    .footer img{
+        width: 100px;
+        height: 100px;
+    }
+}
