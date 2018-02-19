@@ -26,7 +26,6 @@
             <div class="vaja_naslov">
                 <h4 id="naslov"></h4> <!-- NASLOV VAJE -->
                 <div id="gumb_domov_wrapper"><a class="button gumb-domov" href="../index.php">Domov</a></div>
-
                 <!--TODO: Gumb zapri okno-->
             </div>
             <!-- Video in besedilo vaje -->
@@ -47,7 +46,7 @@
     <!-- Gumb domov za vecje zaslone-->
     <div id="domov"><a class="button gumb-domov" href="../index.php">Domov</a></div>
     <!--VR-->
-    <a-scene>
+    <a-scene id="ascene">
         <!-- 360 Slika -->
         <?php
         if(isset($_GET['s'])){
@@ -73,7 +72,7 @@
              echo '<a-entity id="vaja_' . $v . '" onclick=\'setWindow(vaja_' . $v . ')\' geometry="primitive: sphere" material="color: blue" position="' . $row['posX'] . " " . $row['posY'] . " " . $row['posZ'] . '" radius="1.25"></a-entity>';
          }
     	?>
-        <a-plane id="plan" visible="false" height="52" width="60" position="56.823 12.895 27.601" rotation="0 -96 0"></a-plane>
+        <!--<a-plane id="plan" visible="false" height="52" width="60" position="56.823 12.895 27.601" rotation="0 -96 0"></a-plane>-->
 
         <!-- Kamera + cursor -->
         <a-entity camera look-controls>

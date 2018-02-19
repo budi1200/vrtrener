@@ -1,4 +1,4 @@
-function canv(vaja_id,dest){
+function canv(vaja_id){
         var video = $('#vid').attr('url_slika');
         var frame = $('#vid').attr('frames_slika');
         console.log(video);
@@ -7,20 +7,12 @@ function canv(vaja_id,dest){
             selector : '#canvWrapper',
             videos: {
                 clip1: { src: video, frames: frame, cols: 6, fps: 6, loops: 1, onEnd: function(){
-                  //console.log('clip1 ended.');
-                  if(dest){
-                    canvidControl.destroy('clip1');
-                  }else{
-                    canvidControl.pause();
                     canvidControl.play('clip1');
-                  }
                 }},
             },
             width: 300,
             height: 400,
             loaded: function() {
-                if(dest){
-                }else{
                 canvidControl.play('clip1');
                 var id = "canv_" + vaja_id;
                 $('.canvid').attr('id', id);
@@ -62,9 +54,5 @@ function canv(vaja_id,dest){
                 wrapText(canv, opis, text_x, text_y, text_maxWidth, lineHeight);
                 $("#plan").attr('src', '#' + id);
             }
-            }
         });
-        if(dest){
-            //canvidControl.pause();
-        }
     }
