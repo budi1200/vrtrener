@@ -29,10 +29,12 @@ h4{
     display: none;
 }
 
-#canv{
-    background-color:#CCC;
-	border-radius:8px;
+#canvWrapper{
     display: none;
+}
+
+#canvWrapper canvas{
+    border-radius:8px;
 }
 
 @media only screen and (max-width: 500px) {

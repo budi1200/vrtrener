@@ -5,18 +5,17 @@ var offset = 0;
 
 // Preverjanje ce je uporabnik v VR nacinu
 function checkVR(){
-    document.querySelector('a-scene').addEventListener('enter-vr', function () {
-        console.log("VR ENTER");
-        fs = true;
-    });
-    document.querySelector('a-scene').addEventListener('exit-vr', function () {
-        console.log("VR EXIT");
-        fs = false;
-    });
+document.querySelector('a-scene').addEventListener('enter-vr', function () {
+    console.log("VR ENTER");
+    fs = true;
+});
+document.querySelector('a-scene').addEventListener('exit-vr', function () {
+    console.log("VR EXIT");
+    fs = false;
+});
 }
 // Prikaz okna za vajo
 function setWindow(vaja_id) {
-    var vr_id = plan;
     var vaja = $(vaja_id).attr("id");
     var vid = document.getElementById("vid");
 
@@ -25,17 +24,33 @@ function setWindow(vaja_id) {
             vid.pause();
             nastaviVajo(vaja);
                 console.log("waiting");
-                canv();
+                $('#ascene').append('<a-plane id="plan" visible="false" height="52" width="60" position="56.823 12.895 27.601" rotation="0 -103 0"></a-plane>');
+                var vr_id = plan;
+                canv(vaja);
                 vid.load();
                 pos = posZ + offset;
-                console.log(pos);
                 vr_id.setAttribute("position", "56.823 12.895 " + pos);
                 vr_id.setAttribute("visible", true);
                 vaja_id.setAttribute("material", "color: red");
+                for(var i = 1; i <=16;i++){
+                    var imeVaja = 'vaja_' + i;
+                    if(imeVaja != vaja){
+                        $('#' + imeVaja).attr('visible', 'false');
+                    }
+                }
                 open = true;
         }else if(open){ // Zapri okno v vr nacinu ce je odprto
+            var vr_id = plan;
+            $("#plan").remove();
+            $(".canvid").remove();
             vr_id.setAttribute("visible", false);
             vaja_id.setAttribute("material", "color: blue");
+            for(var i = 1; i <=16;i++){
+                var imeVaja = 'vaja_' + i;
+                if(imeVaja != vaja){
+                    $('#' + imeVaja).attr('visible', 'true');
+                }
+            }
             open = false;
         }
     }else if(!fs){ //Normalno okno
@@ -45,7 +60,6 @@ function setWindow(vaja_id) {
         //vid.play();
     }
 }
-
 //Zapri okno v osnovnem nacinu
 function off(el_id) {
     var a = document.getElementById(el_id);
@@ -82,6 +96,8 @@ function nastaviVajo(str) {
         document.getElementById("naslov").innerHTML = xmlDoc.getElementById('ime').innerHTML;
         document.getElementById("opis").innerHTML = xmlDoc.getElementById('opis').innerHTML;
         $('#url').attr("src", xmlDoc.getElementById('url').innerHTML);
+        $('#vid').attr("url_slika", xmlDoc.getElementById('url_slika').innerHTML);
+        $('#vid').attr("frames_slika", xmlDoc.getElementById('frames_slika').innerHTML);
         vid.load();
     }
   }
