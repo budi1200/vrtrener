@@ -3,23 +3,16 @@ var open = false; // Stanje okna v vr nacinu
 var posZ = 0;
 var offset = 0;
 
-window.addEventListener("load",function() {
-    setTimeout(function(){
-        // This hides the address bar:
-        window.scrollTo(0, 1);
-    }, 0);
-});
-
 // Preverjanje ce je uporabnik v VR nacinu
 function checkVR(){
-    document.querySelector('a-scene').addEventListener('enter-vr', function () {
-        console.log("VR ENTER");
-        fs = true;
-    });
-    document.querySelector('a-scene').addEventListener('exit-vr', function () {
-        console.log("VR EXIT");
-        fs = false;
-    });
+document.querySelector('a-scene').addEventListener('enter-vr', function () {
+    console.log("VR ENTER");
+    fs = true;
+});
+document.querySelector('a-scene').addEventListener('exit-vr', function () {
+    console.log("VR EXIT");
+    fs = false;
+});
 }
 // Prikaz okna za vajo
 function setWindow(vaja_id) {

@@ -13,12 +13,11 @@
     <script src="../js/jquery-3.3.1.js"></script>
     <script src="../js/canvid.js"></script>
     <script src="../js/canvas.js"></script>
-    <script src="../js/custom.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="vr.css">
 </head>
 
-<body onload="checkVR()">
+<body>
     <!--Okno za vajo-->
     <div id="okno_vaja" class="window" onclick="off('okno_vaja')">
         <div class="box_text">
@@ -86,6 +85,9 @@
             </a-entity>
         </a-entity>
     </a-scene>
+
+    <script src="../js/custom.js"></script>
+    <script>checkVR();</script>
 </body>
 
 </html>

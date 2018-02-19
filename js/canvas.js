@@ -6,7 +6,7 @@ function canv(vaja_id){
         var canvidControl = canvid({
             selector : '#canvWrapper',
             videos: {
-                clip1: { src: video, frames: frame, cols: 6, fps: 6, loops: 1, onEnd: function(){
+                clip1: { src: video, frames: frame, cols: 6, fps: 7, loops: 1, onEnd: function(){
                     canvidControl.play('clip1');
                 }},
             },
