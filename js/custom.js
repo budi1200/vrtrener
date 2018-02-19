@@ -25,17 +25,32 @@ function setWindow(vaja_id) {
             vid.pause();
             nastaviVajo(vaja);
                 console.log("waiting");
-                canv();
+                canv(vaja,false);
                 vid.load();
                 pos = posZ + offset;
-                console.log(pos);
+                //console.log(pos);
                 vr_id.setAttribute("position", "56.823 12.895 " + pos);
                 vr_id.setAttribute("visible", true);
                 vaja_id.setAttribute("material", "color: red");
+                for(var i = 1; i <=16;i++){
+                    var imeVaja = 'vaja_' + i;
+                    if(imeVaja != vaja){
+                        $('#' + imeVaja).attr('visible', 'false');
+                    }
+                }
                 open = true;
         }else if(open){ // Zapri okno v vr nacinu ce je odprto
+            //$("#plan").attr("src", "");
+            //$("#canvid").remove();
+            canv(vaja,true);
             vr_id.setAttribute("visible", false);
             vaja_id.setAttribute("material", "color: blue");
+            for(var i = 1; i <=16;i++){
+                var imeVaja = 'vaja_' + i;
+                if(imeVaja != vaja){
+                    $('#' + imeVaja).attr('visible', 'true');
+                }
+            }
             open = false;
         }
     }else if(!fs){ //Normalno okno
@@ -45,7 +60,6 @@ function setWindow(vaja_id) {
         //vid.play();
     }
 }
-
 //Zapri okno v osnovnem nacinu
 function off(el_id) {
     var a = document.getElementById(el_id);
