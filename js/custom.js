@@ -126,9 +126,12 @@ function change(){
 }
 
 function changeSky(sk){
-    sky = sk;
     $('#txt').attr('visible', 'true');
-    $("#img-sky").attr("src", "../slike/360_vr/SAM_100_00" + sky + ".jpg");
+    sky = sk;
+    $('#img-sky').on('materialtextureloaded', function(){
+        //console.log("loaded");
+        $('#txt').attr('visible', 'false');
+    })
+    .attr("src", "../slike/360_vr/SAM_100_00" + sky + ".jpg");
     setTocke();
-    $('#txt').attr('visible', 'false');
 }
