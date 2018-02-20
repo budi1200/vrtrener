@@ -47,7 +47,7 @@ function setWindow(vaja_id) {
             vaja_id.setAttribute("material", "color: blue");
             for(var i = 1; i <=16;i++){
                 var imeVaja = 'vaja_' + i;
-                if(imeVaja != vaja){
+                if(imeVaja != vaja && $("#" + imeVaja).attr('sl') == sky){
                     $('#' + imeVaja).attr('visible', 'true');
                 }
             }
@@ -123,4 +123,10 @@ function change(){
         bg.css('background-color','');
         buttons.css('display', 'block');
     }
+}
+
+function changeSky(sk){
+    sky = sk;
+    $("#img-sky").attr("src", "../slike/360_vr/SAM_100_00" + sky + ".jpg");
+    setTocke();
 }

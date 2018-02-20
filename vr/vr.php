@@ -47,30 +47,38 @@
     <!--VR-->
     <a-scene id="ascene">
         <!-- 360 Slika -->
-        <?php
-        if(isset($_GET['s'])){
-            $slikaSt = ($_GET['s']);
-        }else{
-            $slikaSt = 89;
-        }
-        ?>
         <a-sky id="img-sky" src=""></a-sky>
 
         <script>
-            var sky = <?php echo $slikaSt; ?>;
+            var sky = "89";
             $("#img-sky").attr("src", "../slike/360_vr/SAM_100_00" + sky + ".jpg");
         </script>
 		
-		<a-entity onclick="window.location.href='vr.php?s=88'" position="-13.23 5.614 -14.944" geometry="height:5;width:5"></a-entity>
+		<a-entity id="changeButton" onclick="changeSky('88')" position="-13.23 5.614 -14.944" geometry="height:5;width:5"></a-entity>
 
         <?php
-        $query="SELECT * FROM tocke WHERE slika=$slikaSt";
+        $query="SELECT * FROM tocke";
         $result = pg_query($conn,$query);
          while($row = pg_fetch_array($result)){
              $v = $row['vaja_id'];
-             echo '<a-entity id="vaja_' . $v . '" onclick=\'setWindow(vaja_' . $v . ')\' geometry="primitive: sphere" material="color: blue" position="' . $row['posX'] . " " . $row['posY'] . " " . $row['posZ'] . '" radius="1.25"></a-entity>';
+             echo '<a-entity id="vaja_' . $v . '" visible="false" sl="' . $row['slika'] . '" onclick=\'setWindow(vaja_' . $v . ')\' geometry="primitive: sphere" material="color: blue" position="' . $row['posX'] . " " . $row['posY'] . " " . $row['posZ'] . '" radius="1.25"></a-entity>';
          }
-    	?>
+        ?>
+        
+        <script>
+        function setTocke(){
+            for(var i = 1; i <= 16; i++){
+                var imeVaja = '#vaja_' + i;
+                if($(imeVaja).attr('sl') == sky){
+                    $(imeVaja).attr('visible', 'true');
+                }else{
+                    $(imeVaja).attr('visible', 'false');
+                }
+            }
+        }
+        setTocke();
+        </script>
+            
         <!--<a-plane id="plan" visible="false" height="52" width="60" position="56.823 12.895 27.601" rotation="0 -96 0"></a-plane>-->
 
         <!-- Kamera + cursor -->
