@@ -54,7 +54,7 @@
             $("#img-sky").attr("src", "../slike/360_vr/SAM_100_00" + sky + ".jpg");
         </script>
 		
-		<a-entity id="changeButton" onclick="changeSky('88')" position="-13.23 5.614 -14.944" geometry="height:5;width:5"></a-entity>
+		<a-entity id="changeButton" material="src:Arrow_up.png;transparent:true" onclick="changeSky('88')" position="-7.693 -4.477 -14.839" rotation="-20 30 5" geometry="depth:0;height:2;width:5"></a-entity>
 
         <?php
         $query="SELECT * FROM tocke";
@@ -81,7 +81,7 @@
             
         <!--<a-plane id="plan" visible="false" height="52" width="60" position="56.823 12.895 27.601" rotation="0 -96 0"></a-plane>-->
         <a-entity look-controls>
-        <a-text id="txt" value="Loading..." visible="false" color="black" width="10" position="-0.8 0.35 -6"></a-text>
+        <a-text id="txt" value="Nalaganje..." visible="false" color="black" width="10" position="-0.8 0.35 -6"></a-text>
         </a-entity>
         <!-- Kamera + cursor -->
         <a-entity camera look-controls>
