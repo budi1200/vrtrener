@@ -54,7 +54,7 @@
             $("#img-sky").attr("src", "../slike/360_vr/SAM_100_00" + sky + ".jpg");
         </script>
 		
-		<a-entity id="changeButton" material="src:Arrow_up.png;transparent:true" onclick="changeSky('88')" position="-7.693 -4.477 -14.839" rotation="-20 30 5" geometry="depth:0;height:2;width:5"></a-entity>
+		<a-entity id="changeButton" material="src:./Arrow_up.png;transparent:true" onclick="changeSky('88')" position="-7.693 -4.477 -14.839" rotation="-20 30 5" geometry="depth:0;height:2;width:5"></a-entity>
 
         <?php
         $query="SELECT * FROM tocke";
