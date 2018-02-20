@@ -80,7 +80,9 @@
         </script>
             
         <!--<a-plane id="plan" visible="false" height="52" width="60" position="56.823 12.895 27.601" rotation="0 -96 0"></a-plane>-->
-
+        <a-entity look-controls>
+        <a-text id="txt" value="Loading..." visible="false" color="black" width="10" position="-0.8 0.35 -6"></a-text>
+        </a-entity>
         <!-- Kamera + cursor -->
         <a-entity camera look-controls>
             <a-entity 
