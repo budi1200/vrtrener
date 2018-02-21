@@ -8,7 +8,6 @@ $(function() {
         baseHeight   = 0,
         $el;
 
-    //$pageWrap.height($pageWrap.height());
     baseHeight = $pageWrap.height() - $mainContent.height();
 
     $("nav").delegate("a.dynamic", "click", function() {
@@ -25,8 +24,6 @@ $(function() {
                     $mainContent.hide().load(href + " #guts", function() {
                         $mainContent.fadeIn(200, function() {
                             $pageWrap.animate({
-                                //height: "90%"
-                                //height: baseHeight + $mainContent.height() + "px"
                             });
                         });
                         $("nav a").removeClass("current");
@@ -37,11 +34,11 @@ $(function() {
     }
 
     $(window).bind('popstate', function(){
-       _link = location.pathname.replace(/^.*[\\\/]/, ''); //get filename only
+       _link = location.pathname.replace(/^.*[\\\/]/, '');
        loadContent(_link);
     });
 
-} // otherwise, history is not supported, so nothing fancy here.
+}
 
 
 });

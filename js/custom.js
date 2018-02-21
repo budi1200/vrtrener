@@ -129,7 +129,6 @@ function changeSky(sk){
     $('#txt').attr('visible', 'true');
     sky = sk;
     $('#img-sky').on('materialtextureloaded', function(){
-        //console.log("loaded");
         $('#txt').attr('visible', 'false');
     })
     .attr("src", "../slike/360_vr/SAM_100_00" + sky + ".jpg");
