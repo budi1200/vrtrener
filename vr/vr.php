@@ -56,7 +56,7 @@
 		
 		<a-entity id="changeButton1" material="src:../slike/arrow.png;transparent:true" onclick="changeSky('88')" position="-7.693 -4.477 -14.839" rotation="-20 30 5" geometry="depth:0;height:2;width:5"></a-entity>
 
-        <a-entity id="changeButton2" material="transparent:true;src:../slike/arrow.png" onclick="changeSky('89')" position="4.951 -3.471 18.584" rotation="-20 -180 5" geometry="depth:0;height:2;width:5"></a-entity>
+        <a-entity id="changeButton2" visible="false" material="transparent:true;src:../slike/arrow.png" onclick="changeSky('89')" position="4.951 -3.471 18.584" rotation="-20 -180 5" geometry="depth:0;height:2;width:5"></a-entity>
         
         <?php
         $query="SELECT * FROM tocke";
