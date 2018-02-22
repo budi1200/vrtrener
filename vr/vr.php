@@ -50,7 +50,7 @@
         <a-sky id="img-sky" src=""></a-sky>
 
         <script>
-            var sky = "89";
+            var sky = "88";
             $("#img-sky").attr("src", "../slike/360_vr/SAM_100_00" + sky + ".jpg");
         </script>
 		
