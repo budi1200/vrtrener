@@ -132,12 +132,12 @@ function changeSky(sk){
         $('#txt').attr('visible', 'false');
     })
     .attr("src", "../slike/360_vr/SAM_100_00" + sky + ".jpg");
-    if(sky == "88"){
-        $('#changeButton1').attr('visible', 'false');
-        $('#changeButton2').attr('visible', 'true');
-    }else if(sky == "89"){
+    if(sky == "89"){
         $('#changeButton1').attr('visible', 'true');
         $('#changeButton2').attr('visible', 'false');
+    }else if(sky == "88"){
+        $('#changeButton1').attr('visible', 'false');
+        $('#changeButton2').attr('visible', 'true');
     }
     setTocke();
 }
