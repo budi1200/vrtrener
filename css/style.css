@@ -9,6 +9,8 @@
 
 #div_button {
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 .button {
@@ -43,6 +45,7 @@
     text-align: center;
     letter-spacing: 5px;
     padding-top: 10px;
+    margin-bottom: 5px;
 }
 
 .text {
@@ -168,5 +171,13 @@ body {
 
     #tipka_fitnes{
         font-size: 1.5em;
+    }
+
+    #navodila{
+        max-width: 96% !important;
+    }
+
+    #page-wrap{
+        overflow: scroll;
     }
 }

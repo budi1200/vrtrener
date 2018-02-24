@@ -121,7 +121,7 @@ function change(){
     }else{
         nazaj.css('display', 'none');
         bg.css('background-color','');
-        buttons.css('display', 'block');
+        buttons.css('display', 'flex');
     }
 }
 
