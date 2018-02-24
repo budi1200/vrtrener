@@ -21,7 +21,7 @@ function canv(vaja_id){
                 var opis = document.getElementById("opis").innerHTML;
                 var naslov = document.getElementById("naslov").innerHTML;
                 var text_x = 326;
-                var text_y = 61;
+                var text_y = 25;
                 var text_maxWidth = 164;
                 var lineHeight = 17;
                 canv.canvas.width = 500;
@@ -29,9 +29,9 @@ function canv(vaja_id){
                 canv.fillStyle = "#CCC";
                 canv.fillRect(0, 0, 500, 500);
                 canv.fillStyle = "#000";
-                canv.font = "bold 16px Arial";
-                canv.fillText(naslov, 25, 458);
-                canv.font = "14px Arial";
+                canv.font = "bold 18px Arial";
+                canv.fillText(naslov, 25, 456);
+                canv.font = "16px Arial";
         
                 function wrapText(canv, text, x, y, maxWidth, lineHeight) {
                     var words = text.split(' ');
