@@ -57,7 +57,7 @@ function setWindow(vaja_id) {
         nastaviVajo(vaja);
         $("#okno_vaja").css("opacity", "0.97");
         $("#okno_vaja").css("pointerEvents", "auto");
-        //vid.play();
+        $("#vid").get(0).play();
     }
 }
 //Zapri okno v osnovnem nacinu
@@ -92,7 +92,7 @@ function nastaviVajo(str) {
 
         posZ = parseInt(xmlDoc.getElementById("posZ").innerHTML);
         offset = parseInt(xmlDoc.getElementById("offset").innerHTML);
-        console.log(offset);
+        //console.log(offset);
         document.getElementById("naslov").innerHTML = xmlDoc.getElementById('ime').innerHTML;
         document.getElementById("opis").innerHTML = xmlDoc.getElementById('opis').innerHTML;
         $('#url').attr("src", xmlDoc.getElementById('url').innerHTML);
