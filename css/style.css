@@ -181,3 +181,9 @@ body {
         overflow: scroll;
     }
 }
+
+@media (max-height: 500px){
+    #page-wrap{
+        overflow: scroll;
+    }
+}
