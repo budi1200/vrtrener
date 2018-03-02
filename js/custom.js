@@ -131,7 +131,7 @@ function changeSky(sk){
     $('#img-sky').on('materialtextureloaded', function(){
         $('#txt').attr('visible', 'false');
     })
-    .attr("src", "../slike/360_vr/SAM_100_00" + sky + ".jpg");
+    .attr("src", "../slike/360_vr/SAA_100_00" + sky + ".jpg");
     if(sky == "89"){
         $('#changeButton1').attr('visible', 'true');
         $('#changeButton2').attr('visible', 'false');

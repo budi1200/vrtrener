@@ -51,7 +51,7 @@
 
         <script>
             var sky = "88";
-            $("#img-sky").attr("src", "../slike/360_vr/SAM_100_00" + sky + ".jpg");
+            $("#img-sky").attr("src", "../slike/360_vr/SAA_100_00" + sky + ".jpg");
         </script>
 		
 		<a-entity id="changeButton1" visible="false" material="src:../slike/arrow.png;transparent:true" onclick="changeSky('88')" position="-7.693 -4.477 -14.839" rotation="-20 30 5" geometry="depth:0;height:2;width:5"></a-entity>
