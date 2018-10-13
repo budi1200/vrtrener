@@ -10,6 +10,7 @@ This website allows the user to watch fitness tutorials in VR, to fully immerse 
 * Run this command:  ```git clone https://github.com/budi1200/vrtrener.git ```
 * Move into the cloned directory: ``` cd vrtrener ```
 * Modify database connection settings in ``` connect.php ```
+* Import ``` database.sql ``` into database
 * Project is now accessible on ``` localhost ```
 
 ## Stack
